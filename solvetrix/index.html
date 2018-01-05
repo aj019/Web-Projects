@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+
+	</script>
+</head>
+<body onload="getValue()">
+	<form>
+		<input type="text" placeholder="Trick title" id="trick_title">
+		<input type="text" placeholder="Trick image" id="trick_img_url" />
+		<button onclick="addTrick();return false;">Add trick</button>
+		<br><br>			
+
+		<!-- Ques1 -->
+		<input type="text" placeholder="Question " id="ques1">
+		<input type="text" placeholder="Answer 1" id="q1a1">
+		<input type="text" placeholder="Answer 2" id="q1a2">
+		<input type="text" placeholder="Answer 3" id="q1a3">
+		<input type="text" placeholder="Answer 4" id="q1a4">
+		<input type="text" placeholder="Correct Option" id="correct_option1">
+		<button onclick="addQues1();return false;">Add </button>
+		
+		<br><br>
+
+		
+</form>
+	
+	<div id="result">
+		<h1 id="title">Title</h1>
+		<img id="image" src="">
+		<div id="questions">
+			
+		</div>
+	</div>
+
+</body>
+
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.0.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.0.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.0.5/firebase-database.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCdIaMiwdd5KwzMh3wC2Imfv_UHM73__1s",
+    authDomain: "solvetrix.firebaseapp.com",
+    databaseURL: "https://solvetrix.firebaseio.com",
+    storageBucket: "solvetrix.appspot.com",
+  };
+
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript">
+
+var trickId;
+
+var quesId;
+var ques_no = 0;
+
+var ref = firebase.database().ref();
+
+	function addTrick(){
+
+		var trick_img_url = document.getElementById('trick_img_url').value;
+		var trick_title = document.getElementById('trick_title').value;
+		var trickKey = ref.child('tricks').push().key;
+		trickId = trickKey;
+		
+		 ref.child('tricks/'+trickId+'/').set({
+			"trick_img_url":trick_img_url,
+			"trick_title":trick_title
+		});
+	}
+
+	function addQues1(){
+				  
+		  var ques1 = document.getElementById('ques1').value;
+		  var q1a1 = document.getElementById('q1a1').value;
+		  var q1a2 = document.getElementById('q1a2').value;
+		  var q1a3 = document.getElementById('q1a3').value;
+		  var q1a4 = document.getElementById('q1a4').value;
+		  var correct_option1 = document.getElementById('correct_option1').value;
+		 
+		  var quesKey = ref.child('questions').child(trickId).push().key;
+		  	ques1Id = quesKey;
+		  	var ques = {
+
+		  		 "ques":ques1,
+		  		 	"ans1": q1a1,
+		  		 	"ans2": q1a2,
+		  		 	"ans3": q1a3,
+		  		 	"ans4": q1a4,
+		  		 
+		  		 "correct_option":correct_option1
+		  		
+		  	};
+		
+		ref.child('questions/'+trickId+'/'+quesKey+'/').set(ques);
+		
+	}
+
+	function getValue(){
+
+
+			firebase.database().ref().child('questions').child(trickId).on('value', function(snapshot) {
+		  
+			    snapshot.forEach(function(childSnapshot) {
+			    // key will be "fred" the first time and "barney" the second time
+			    var key = childSnapshot.key;
+			    
+			    var ques = childSnapshot.child('ques').val();
+			   var div =  document.getElementById('questions');
+				var para = document.createElement("P");
+				var t = document.createTextNode("T");
+				t.nodeValue = ques;
+				para.appendChild(t);
+				 div.appendChild(para);
+			   	//div.innerHTML = div.innerHTML + ques;
+			    //  firebase.database().ref().child('questions/'+key+'/').on('value',function(snap){
+			    //  	var obj = snap.child('ques').val();
+			    //  	alert(obj);
+			    //  });
+			    // // childData will be the actual contents of the child
+			    
+			  });
+
+		});
+
+			firebase.database().ref().child('tricks').on('value',function(snapshot){
+				snapshot.forEach(function(childSnapshot){
+
+					var key = childSnapshot.key;
+					if(key == trickId){
+						var title = childSnapshot.child('trick_title').val();
+						var image = childSnapshot.child('trick_img_url').val();
+						document.getElementById('title').innerHTML = title; 							
+						document.getElementById('image').src = image;
+					}
+				});
+			});
+	
+		}
+		
+
+	</script>
+</html>

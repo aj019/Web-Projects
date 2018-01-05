@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<script type="text/javascript">
+	
+	$("#input").change(function() {
+  $("#button").data("value", $(this).val());
+  changeColor();
+});
+
+function changeColor() {
+
+  var value = $("#button").data("value");
+  if (value > 100) {
+    value = 100;
+  }
+
+  value = value / 100;
+  var hexvalue = Math.round(255 * value);
+
+  $("*").css({
+    borderColor: "rgb(" + hexvalue + ", " + hexvalue  +  ", " + hexvalue + ")",
+    color: "rgb(" + hexvalue + ", " + hexvalue  +  ", " + hexvalue + ")"
+  });
+  
+}
+</script>
+	<style type="text/css">
+
+    * {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html, body, #container, #button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: url(https://poxmedia.net/u/danielpox/92334E.jpg);
+  background-size: cover;
+  background-position: 0 50%;
+  font-family: Lato, Helvetica, sans-serif;
+  color: white;
+}
+
+#container {
+  box-shadow: inset 100vw 100vw rgba(0, 0, 0, 0.2);
+}
+
+#input {
+  padding: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  position: absolute;
+  top: calc(50% - 2vw);
+  right: 64vw;
+  font-size: 1.28vw;
+  color: white !important;
+  text-align: center;
+  border: 4px solid white !important;
+  background: transparent;
+}
+
+#button {
+  width: auto;
+  height: auto;
+  padding: 1.5vw;
+  position: absolute;
+  top: calc(50% - 3vw - 1ex / 3);
+  left: calc(50% - 5vw);
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  border: 4px solid white;
+  background: transparent;
+  transition: background 0.1s ease-in-out;
+}
+
+p {
+  position: absolute;
+  top: calc(50% - 1.25vw);
+  left: 64vw;
+  line-height: 0;
+  text-align: center;
+  transition: background 0.1s ease-in-out;
+}
+
+#button:hover, #input:hover {
+  color: white !important;
+  border-color: white !important;
+  background: rgba(0, 0, 0, 0.64);
+}
+
+	</style>
+</head>
+<body>
+<div id="container">
+  <input type="number" max="100" min="0" value="100" id="input" />
+  <button data-value id="button">Button</button>
+  <p>Specify the "color" intensity in the <i>input box</i> to the left</p>
+</div>
+</body>
+</html>

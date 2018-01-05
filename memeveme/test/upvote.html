@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery/jquery.js"></script>
+	<style type="text/css">
+
+		#upvote{
+			background-color: transparent;
+			padding: 0;
+			border: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<button id="upvote"><img src="upvote.png" id="myImage"></button>
+</body>
+</html>
+
+<script type="text/javascript">
+	$(document).ready(function() {      
+	    $('#button').click(function() {
+	        var input = this;
+	        var $img = $('#myImage');
+	        
+
+	        if($(this).is(':disabled')) {
+	        	input.disabled = false;
+	        	$img.attr('src','upvote.png');
+	        }
+
+	        else{
+	        input.disabled = true;
+	        $img.attr('src','upvote_disabled.png');
+	   		}
+
+	    })   
+	})
+</script>

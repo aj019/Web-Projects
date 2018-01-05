@@ -1,0 +1,45 @@
+<html>
+<head>
+	<script type="text/javascript" src="jquery/jquery.js"></script>
+	<title></title>
+	<style type="text/css">
+		#myId{
+ 		   color: orange;
+		}
+	</style>
+</head>
+<body>
+
+<form>
+	<input type="text" id="fromUrl" name="url"></input>
+	<input type="button" onclick="getId()"></input>
+</form>
+YouTube ID: <span id="myId"></span>
+<br>
+<br>
+Embed code: <pre id="myCode"></pre>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+	function getId() {
+		var fromUrl = document.getElementById('fromUrl');
+		var url = fromUrl.value();
+		var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+		var match = url.match(regExp);
+		var myId;
+		if (match && match[2].length == 11){
+			myId = match[2];
+		}
+		else{
+		    myId = 'error';
+		}
+		return;
+
+	}
+	
+	$('#myId').html(myId);	
+	$('#myCode').html('<iframe width="560" height="315" src="//www.youtube.com/embed/' + myId + '" frameborder="0" allowfullscreen></iframe>');
+</script>

@@ -1,0 +1,297 @@
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="jquery/jquery.js"></script>
+	<style type="text/css">
+
+        @import url(http://fonts.googleapis.com/css?family=Roboto:300);
+        @import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+
+    	/*----- Tabs -----*/
+        .tabs {
+            width: 40%;
+            display:inline-block;
+        }
+         
+        /*----- Tab Links -----*/
+        /* Clearfix */
+        .tab-links:after {
+            display:block;
+            clear:both;
+            content:'';
+        }
+
+        .tab-links{
+            margin: 0px;
+            padding: 0;
+            border-bottom: 2px solid #87d3b7;
+        }
+
+     
+        .tab-links li {
+            float:left;
+            list-style:none;
+
+        }
+     
+        .tab-links a {
+            padding:9px 15px;
+            display:inline-block;
+            background:#eff0f2;
+            font-size:16px;
+            font-weight:600;
+            color:#888;
+            font-family: 'Roboto', sans-serif;
+            transition:all linear 0.15s;
+            text-decoration: none;
+        }
+ 
+     
+        li.active a, li.active a:hover {
+            background:#87d3b7;
+            color:#fff;
+        }
+     
+        /*----- Content of Tabs -----*/
+        .tab-content {
+            padding:15px;
+            border-top: 0;
+            border-bottom: #87d3b7 solid 2px;
+            border-left: #87d3b7 solid 2px;
+            border-right: #87d3b7 solid 2px;
+            background:#fff;
+        }
+ 
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block;
+        }
+
+        /*--------------input[type='file'] styling-------*/
+
+        .meme-upload{
+        /* Style the color of the message that says 'No file chosen' */
+          color: #878787;
+        }
+
+        .meme-upload::-webkit-file-upload-button {
+          background: #3F85C0;
+          border: 1px solid #3F85C0;
+          color: #fff;
+          cursor: pointer;
+          font-size: 14px;
+          outline: none;
+          padding: 10px 25px;
+          text-transform: uppercase;
+          transition: all 1s ease;
+          font-family: 'Ubuntu', sans-serif;
+        }
+
+        .meme-upload::-webkit-file-upload-button:hover {
+          background: #fff;
+          border: 1px solid #535353;
+          color: #000;
+        }
+
+        .meme-upload::-moz-file-upload-button {
+          background: #3F85C0;
+          border: 1px solid #3F85C0;
+          color: #fff;
+          cursor: pointer;
+          font-size: 14px;
+          outline: none;
+          padding: 10px 25px;
+          text-transform: uppercase;
+          transition: all 1s ease;
+          font-family: 'Ubuntu', sans-serif;
+        }
+
+        .meme-upload::-moz-file-upload-button:hover {
+          background: #fff;
+          border: 1px solid #535353;
+          color: #000;
+        }
+
+        .meme-upload::-o-file-upload-button {
+          background: #3F85C0;
+          border: 1px solid #3F85C0;
+          color: #fff;
+          cursor: pointer;
+          font-size: 14px;
+          outline: none;
+          padding: 10px 25px;
+          text-transform: uppercase;
+          transition: all 1s ease;
+          font-family: 'Ubuntu', sans-serif;
+        }
+
+        .meme-upload::-o-file-upload-button:hover {
+          background: #fff;
+          border: 1px solid #535353;
+          color: #000;
+        }
+
+
+        .title , .credit , .video-url{
+            width: 98%;
+            height: 6%;
+            border: 1px solid #a1a9b5   ;
+            background-color: ;
+            padding-left: 1%;
+            font-size: 16px;
+            font-family: 'Ubuntu', sans-serif;
+
+        }
+
+        .tag-table{
+            width: 100%;
+            height: 7%;
+
+        }
+
+        .tag-table td{
+            padding: 0;
+        }
+
+        .tag-table td input {
+            width: 80%;
+            height: 100%;
+            border: 1px solid #a1a9b5;
+            padding-left: 2%;
+            font-size: 16px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .submit-content{
+            background: #87d3b7;
+            border: 1px solid #87d3b7;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            outline: none;
+            padding: 10px 25px;
+            width: 50%;
+            text-transform: uppercase;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .tag-table td{
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 16px;
+        }
+
+        #nsfw{
+            width: 3%;
+            margin: 0;
+
+        }
+
+        label[for='nsfw']{
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+	</style>
+	<title></title>
+</head>
+<body>
+
+	<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1">Memes</a></li>
+        <li><a href="#tab2">Videos</a></li>
+
+    </ul>
+ 
+    <div class="tab-content">
+    <div id="tab1" class="tab active">
+            <form action="upload-image.php" method="post" enctype="multipart/form-data" autocomplete="off">
+                <p>
+                <input type="file" name="meme" class="meme-upload" required>
+                <br>
+                <br>
+                <input type="text" name="title" class="title" placeholder="Title" required>
+                <br>
+                <br>
+                <table class="tag-table"> 
+                <tr>
+                    <center>
+                    <td># <input type="text" name="tag1" class="tags" placeholder = "Tag 1" required></td>
+                    <td># <input type="text" name="tag2" class="tags" placeholder = "Tag 2 "></td>
+                    <td># <input type="text" name="tag3" class="tags" placeholder = "Tag 3"></td>
+                    </center>
+                </tr>
+                </table>
+                <br>
+                <input type="text" name="credit" class="credit" placeholder="Credit Original Uploader">
+                <br>
+                <br>
+                <input type="checkbox" name="nsfw" id="nsfw" value="1"><label for="nsfw">NSFW</label>
+                <br>
+                <br>
+                <center>
+                <input type="submit" name="submit" class="submit-content" value="Submit">
+                </center>
+                </p>
+            </form>
+        </div>
+        <div id="tab2" class="tab">
+            <p>
+                <form action="upload-video.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+                <p>
+                <input type="text" name="video_url" placeholder="Youtube URL" class="video-url" required>
+                <br>
+                <br>
+                <input type="text" name="title" class="title" placeholder="Title" required>
+                <br>
+                <br>
+                <table class="tag-table"> 
+                <tr>
+                    <center>
+                    <td># <input type="text" name="tag1" class="tags" placeholder = "Tag 1" required></td>
+                    <td># <input type="text" name="tag2" class="tags" placeholder = "Tag 2 "></td>
+                    <td># <input type="text" name="tag3" class="tags" placeholder = "Tag 3"></td>
+                    </center>
+                </tr>
+                </table>
+                <br>
+                <input type="text" name="credit" class="credit" placeholder="Credit Original Uploader">
+                <br>
+                <br>
+                <input type="checkbox" name="nsfw" id="nsfw" value="1"><label for="nsfw">NSFW</label>
+                <br>
+                <br>
+                <center>
+                <input type="submit" name="submit" class="submit-content" value="Submit">
+                </center>
+                </p>
+            </form>
+            </p>
+        </div>
+ 
+    </div>
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	
+	jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+jQuery('.tabs ' + currentAttrValue).siblings().slideUp(400);
+jQuery('.tabs ' + currentAttrValue).delay(400).slideDown(400);        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+});
+
+</script>
+</html>

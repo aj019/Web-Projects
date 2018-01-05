@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		.menu-container{
+			width: 100%;
+			height: 9%;
+			background-color: #3E3E3E;
+			position: fixed;
+
+		}
+
+		.logo-container{
+			height: 100%;
+			width: 20%;
+			background-image: url("resources/logo-white.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 50%;
+			display: inline-block;
+		}
+
+		.link-container{
+			display: inline-block;
+			width: 79%;
+			height: 100%;
+		}
+
+		.link-table{
+			height: 100%;
+			width: 60%;
+			margin-left: 40%;
+		}
+
+		.link a{
+			text-decoration: none;
+			font-family: 'PT Sans', sans-serif;
+			color: #D7D8D8;
+		}
+
+		.link a:hover{
+		animation: fadein 2s;
+	    -moz-animation: fadein 2s; /* Firefox */
+	    -webkit-animation: fadein 2s; /* Safari and Chrome */
+	    -o-animation: fadein 2s; /* Opera */
+		}
+		@keyframes fadein {
+		    from {
+		        opacity:0;
+		    }
+		    to {
+		        opacity:1;
+		    }
+		}
+		@-moz-keyframes fadein { /* Firefox */
+		    from {
+		        opacity:0;
+		    }
+		    to {
+		        opacity:1;
+		    }
+		}
+		@-webkit-keyframes fadein { /* Safari and Chrome */
+		    from {
+		        opacity:0;
+		    }
+		    to {
+		        opacity:1;
+		    }
+		}
+		@-o-keyframes fadein { /* Opera */
+		    from {
+		        opacity:0;
+		    }
+		    to {
+		        opacity: 1;
+		    }
+		}
+	</style>
+</head>
+<body>
+
+		<div class="menu-container">
+				<div class="logo-container">
+				</div>
+				<div class="link-container">
+					<table class="link-table">
+						<tr>
+							<td class="link"><a href="index.html#home">HOME</a></td>
+							<td class="link"><a href="index.html#about">ABOUT</a></td>
+							<td class="link"><a href="">EVENTS</a></td>
+							<td class="link"><a href="team.html">TEAM</a></td>
+							<td class="link"><a href="#" onClick="lightbox_open();">CONTACT</a></td>
+						</tr>
+
+					</table>
+				</div>
+			</div>
+</body>
+</html>

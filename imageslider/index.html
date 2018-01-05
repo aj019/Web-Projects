@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Slider</title>
+<style type="text/css">
+	
+#container{
+
+	width: 450px;
+	height: 450px;
+	margin: 20px auto;
+	position: relative;
+}
+
+   #img{
+
+   	width: 450px;
+	height: 450px;
+	position: absolute;
+   }
+
+   #left-holder{
+
+   	width: 100px;
+   	height: 450px;
+   	position: absolute;
+   	left: 0px;
+   	top: 0px;
+   }
+
+   #right-holder{
+
+   	width: 100px;
+   	height: 450px;
+   		position: absolute;
+   	right: 0px;
+   	top: 0px;
+   }
+
+   .left{
+
+   	height: 50px;
+   	width: 50px;
+   	position: absolute;
+   	top: 40%;
+   	left:0px;
+   	background-color: transparent;
+   }
+
+
+
+   .right{
+
+   	height: 50px;
+   	width: 50px;
+   	position: absolute;
+   	top: 40%;
+   	right:0px;
+   	background-color: transparent;
+   }
+</style>
+
+<script type="text/javascript">
+	
+	var imgcount=1;
+	var total=5;
+
+	function slide(x){
+
+		var Image= document.getElementById('img');
+		imgcount=imgcount+x;
+		if(imgcount>total)
+			imgcount=1;
+		else if(imgcount<1)
+			imgcount=total;
+
+		Image.src="resources/pic"+imgcount+".jpg";
+	}
+
+	window.setInterval(function slider(){
+
+		var Image= document.getElementById('img');
+		imgcount=imgcount+1;
+		if(imgcount>total)
+			imgcount=1;
+		else if(imgcount<1)
+			imgcount=total;
+		
+		Image.src="resources/pic"+imgcount+".jpg";
+	},2000);
+</script>
+
+
+</head>
+<body  onload="slider()">
+
+<div id="container">
+   <img src="resources/pic1.jpg" id="img">
+
+   <div id="left-holder"><img  onclick="slide(-1)" class="left" src="resources/leftarrow.jpg"></div>
+   <div id="right-holder"><img onclick="slide(1)" class="right" src="resources/rightarrow.jpg"></div>
+	
+
+</div>
+
+</body>
+</html>

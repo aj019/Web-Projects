@@ -1,0 +1,215 @@
+/*For all start*/
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.text{
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  word-spacing: 1.5px;
+  font-size: 1.2em;
+}
+
+.text-second{
+  font-weight: 400;
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  padding: 30px 0px 30px 0px;
+}
+
+.text-third{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  padding: 30px 0px 20px 0px;
+}
+
+#title-second{
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size:3.5em;
+}
+
+.border{
+  border: 2px solid rgb(206,35,35);
+}
+
+.round{
+  border-radius: 50%;
+}
+
+.error {
+	padding:25px 0px;
+	border:5px solid rgba(150,0,0,0.8);
+	color:rgba(150,0,0,1);
+}
+.success {
+	padding:25px 0px;
+	border:5px solid rgba(0,150,0,0.8);
+	color:rgba(0,150,0,1);
+}
+
+
+/*for all end*/
+
+
+/*first content start*/
+#first-content {
+  background: url("../data/topimage.png") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 635px;
+}
+#logo a{
+  margin-top: 20px;
+  margin-left: 50px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#logo a:hover{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#title{
+  margin-top: 150px;
+  color: #FFFFFF;
+  font-size: 4.0em;
+}
+
+#chevron-auto{
+  font-size: 3.5em;
+  color:#FFFFFF;
+  margin-top: 130px;
+}
+/*first content end*/
+
+/*what do we offer start*/
+#what-do-we-offer{
+  padding: 50px 25px;
+}
+/*what do we offer end*/
+
+
+/*who we are start*/
+#who-are-we{
+  background: url('../data/whoarewe.png') center center no-repeat;
+  background-size: cover;
+}
+
+#who-are-we-content{
+  background-color: rgba(221,231,238,0.6);
+
+  padding: 50px 25px;
+}
+/*who we are end*/
+
+
+/*how does it work start*/
+#how-does-it-work{
+  padding: 50px 25px;
+}
+
+/*how does it work end*/
+
+
+/*how-much-does-it-cost start*/
+#how-much-does-it-cost{
+  background: url("../data/cube3.PNG") center center repeat;
+  padding: 50px 25px;
+}
+
+#content-box{
+  background-color: rgb(81,102,122);
+  margin-top: 100px;
+  padding: 50px 25px;
+  border-radius: 1px;
+  box-shadow: 0 8px 8px 2px rgba(0, 0, 0, 0.3), 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+}
+/*how-much-does-it-cost end*/
+
+/*form start*/
+#submit-assignment{
+  padding: 100px 25px;
+}
+
+#assignment-form input[type=text]{
+  height: 60px;
+  width: 270px;
+  padding: 5px 10px !important;
+}
+
+#assignment-form input[type=email]{
+  height: 60px;
+  width: 270px;
+  padding: 5px 10px !important;
+}
+
+
+#assignment-form input[type=submit]{
+  height: 60px;
+  width: 250px;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px 10px !important;
+  transition: background-color 0.6s;
+}
+
+#assignment-form input[type=submit]:hover{
+  background-color: rgba(255, 0, 0, 0.5);
+}
+/*form end*/
+
+/*footer start*/
+footer{
+  padding: 25px 25px;
+}
+footer p{
+  opacity: 0.2;
+}
+/*footer end*/
+/*toollip*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+}

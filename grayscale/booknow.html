@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Grayscale - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link href="stylesheets/grayscale.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	<script type="text/javascript" src="javascripts/vvk6cwj.js"></script>
+	<!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+	<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="javascripts/base.js"></script>
+	<script type="text/javascript" src="javascripts/popup.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.fancybox.min.js"></script>
+	<link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<link rel="stylesheet" href="stylesheets/popup.css">
+	<link rel="stylesheet" href="stylesheets/jquery.fancybox.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+
+        @font-face {
+    font-family: 'SEGOEUIL';
+    src: url('fonts/SEGOEUIL.eot');
+    src: local('SEGOEUIL'), url('fonts/SEGOEUIL.woff') format('woff'), url('fonts/SEGOEUIL.ttf') format('truetype');
+     }
+
+     body{
+
+        font-family:'SEGOEUIL' !important;
+     }   
+     h2{
+
+     font-family:'SEGOEUIL' !important;
+     text-transform:none !important ;
+     font-size: 420% !important;
+     margin-top:-12% !important ;
+     color: white !important;
+     }
+
+     .container{
+
+     	padding-bottom: 0 !important;
+     	min-height: 100%;
+     	padding-top: 11%;
+     }
+
+     .footer table tr td a{
+
+     	font-family:'SEGOEUIL' !important;
+     text-transform:none !important ;
+     color: white !important;	
+     
+     }
+
+
+    .navbar-brand{
+        height: 77px;
+    }
+
+    .navbar-nav{
+
+    	margin-top: 13px;
+        text-transform: none;
+
+    }
+    .navbar-custom .nav li a{
+
+        font-family: 'SEGOEUIL' !important;
+        font-size: 16px;
+    }
+    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
+    	  margin-left:-4%;
+    }
+
+    .active{
+    
+    
+    background-image: none !important;
+    background-color: rgb(47, 174, 255) !important;
+    }
+
+    .unactive{
+    
+    background-color: rgb(175, 182, 182) !important;
+    color: white;
+    background-image: none !important;
+    }
+
+    .unactive :hover{
+
+        color: grey !important;
+    }
+
+    .hourly-button{
+        border-radius: 0px;
+        border: 0px;
+        
+
+    }
+
+    .outstations-button{
+        border-radius: 0px;
+        margin-left: -2px;
+        border: 0px;
+    
+    }
+
+    #datepicker2{
+
+        padding-left: 0px !important;
+    }
+
+    #datepicker2{
+
+        padding-left: 0px !important;
+    }
+
+    .input-group{
+
+    	width: 100% !important;
+    }
+
+    @-moz-document url-prefix() {
+    
+    #half-day {
+        margin-left: 7% !important;
+    }
+
+    .addwidth{
+
+    	width:45% !important;
+    }
+
+    .addwidth70{
+    	width: 70%; 
+    	float: left;
+    }
+
+    button{
+
+        background-color: #2FAEFF !important;
+    }   
+
+    }
+    </style>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+	<div id="overlay" class="background"></div>
+    <!-- Navigation -->
+    <table id="header" class="header">
+    <tr>
+        <td class="zero hidden-xs">
+            <table>
+                <tr>
+                    <td><a href="http://www.rutogo.com/" class="logo"></a></td>
+                    <td class="visible-md visible-lg"><a target="_blank" href="https://twitter.com/search?q=%23OneAppAllCabs&src=typd">&#35;OneAppAllCabs</a></td>
+                </tr>
+            </table>
+        </td>
+        
+        <td class="hidden-xs">
+            <table class="middle">
+                <tr>
+                    <td><a href="about.html" style="margin-left:0px">About Us</a></td>
+                    <td><a href="how.html">How Rutogo Works</a></td>
+                    <td><a target="_blank" href="http://blog.rutogo.com/">Blog</a></td>
+                    <td><a href="faq.html">FAQs</a></td>
+                    <td><a href="jobs.html">Jobs</a></td>
+                    <td><a target="_blank"  href="http://corporate.rutogo.com/">Corporate</a></td>              
+                </tr>
+            </table>
+        </td>
+        
+        <td class="zero hidden-xs">
+            <table>
+                <tr>
+                    <td class="visible-md visible-lg"><span><a>Call : +91-9999-088-077<br>(For Offline Bookings)</a></span></td>
+                    
+                </tr>
+            </table>
+        </td>
+        
+        <td class="visible-xs">
+            <table>
+                <tr>
+                    <td><a href="index.html" class="logo"></a></td>
+                </tr>
+            </table>
+        </td>
+        
+        <td class="zero visible-xs">
+            <table class="middle">
+                <tr>
+                    
+                    <td class="menuwrapper"><a href="#" class="menu bullet">Menu</a></td>
+                    <td class="closewrapper"><a href="#" class="close2 bullet">Close</a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12 ">
+                        <h2 class="brand-heading pull-left">Book most economical Taxi</h2>
+                    </div>
+                 </div>
+                 <div class="row" style="padding-bottom:2%">    
+
+					                <div class="col-md-12 col-xs-12 trip  pull-left" >
+					                   <button type="button" class="btn-lg btn-primary pull-left active hourly-button col-md-3 col-xs-6">Local</button>
+					                   <button type="button" class="btn-lg btn-primary pull-left unactive outstations-button col-md-3 col-xs-6">Outstation
+                                       </button>
+                                          
+					                </div>
+        			</div>	
+               			
+                
+            <form class="form-inline hourly-form">
+             <div class="row">
+	             <div class="col-md-12">
+	                    <div class="hourly pull-left " style="padding-top:0px">
+
+	                    	<div class="row one-round-radio">    
+                                    <div class="radio-inline col-md-3 addwidth " >
+                                        <label class="oneway-radio addwidth70">
+                                          <input type="radio" name="type" id="half-day"  value="Half Day (4 hrs and 40 Km)" checked >
+                                           Half Day (4 hrs & 40 Km)
+                                        </label>
+                                    </div>
+                                    <div class="radio-inline col-md-3 addwidth" > 
+                                        <label class="roundtrip-radio addwidth70">
+                                        <input type="radio" name="type" id="full-day" value="Full Day (8 hrs and 80 Km)" >
+                                         Full Day (8 hrs & 80 Km)
+                                      </label>  
+                                    </div>
+                        </div>
+                        
+
+                        <div class="row"><br></div>
+
+
+	                        <div class="form-group pull-left ">	                          
+		                        <input type="text" class="form-control" id="inputaddress" placeholder="From" name="pickup_location" required>
+		                    </div>
+	                        
+	                        <div class="form-group pull-left col-md-3">
+	                        <div class='input-group date' id='datetimepicker1'>
+	                                            <input type='text' class="form-control" placeholder="Depart date and time" name="departure_datetime" required/>
+	                                            <span class="input-group-addon">
+	                                                <span class="glyphicon glyphicon-calendar"></span>
+	                                            </span>
+	                                        </div>
+	                        </div>
+	                                            
+	                        
+	                         <div class="form-group pull-left  ">
+                                            <select class="form-control" name="car" id="car" required>
+                                                <option value="" disabled selected>Select Car</option>
+                                                <option value="Hatchback">Hatchback (Indica or similar)</option>
+                                                <option value="Sedan">Sedan (Indigo or similar)</option>
+                                                <option value="MUV">MUV (Innova or similar)</option>
+                                            </select>
+                            </div>	                      
+	                </div>  
+	             </div>                 
+            </div>
+
+            <div class="row">
+                            <div class="col-md-6 hourly-submit-button" style="">
+                                <button type="button" onclick="getinfo();" style="background-color: #2FAEFF !important;" class="btn btn-primary pull-left">Proceed<span class="glyphicon glyphicon-arrow-right" style="margin-left:12px;" id="hourly_proceed_button"></span> </button>             
+                            </div>
+            </div>  
+
+
+				<div class="row">
+	             
+            	<div class="container" style="padding-top:0px;">
+	             <div class="col-md-5  col-xs-12  pull-left col-md-offset-3">
+	                
+		                <div class="form user-info">
+		                    <div class="form-group  col-md-12">
+		                        <input type="text" class="form-control input-group" id="inputName" placeholder="Name" name="name">
+		                    </div>
+		                    <br><br>
+		                    <div class="form-group col-md-12">
+		                        <input type="email" class="form-control input-group" id="inputEmail" placeholder="Email" name="email_id">
+		                    </div>
+		                    <br><br>
+		                    <div class="form-group col-md-12">
+		                        <input type="text" class="form-control input-group" id="inputPhoneno" placeholder="Phone Number" name="contact_number">
+		                    </div>
+		                    <br><br>
+		                    <button type="button" onclick="savedata_hourly()" style="background-color: #2FAEFF !important;"  class="btn btn-primary">Book</button>
+		                </div>
+		            </div>    
+		         </div>       
+		       </div> 
+        </form>
+            <!--Hourly Rentals End-->
+
+
+
+
+
+            <div class="row">
+	             <div class="col-md-12">
+	                <div class="outstations pull-left " style="padding-top:0px;">
+                        
+
+                        <div class="row one-round-radio">    
+                                    <div class="radio-inline col-md-2  " >
+                                        <label class="oneway-radio">
+                                          <input type="radio" name="optionsRadios" id="optionsRadios1"  value="0" checked >
+                                            One Way
+                                        </label>
+                                    </div>
+                                    <div class="radio-inline col-md-2" > 
+                                        <label class="roundtrip-radio">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="1" >
+                                            Round Trip
+                                      </label>  
+                                    </div>
+                        </div>
+
+
+                        <div class="row"><br></div>
+
+
+	                    <form class="form-inline round-trip-form" >
+                            
+                        <input type="hidden" name="type1" value="Round Trip">
+                        <div class="row">
+                            <div class="roundtrip col-md-12"> 
+    	                        <div class="form-group pull-left">    
+                                    <input type="text" class="form-control" id="inputaddress2" placeholder="From" name="pickup_location1">
+                                </div>
+    	                        
+                                <div class="form-group pull-left">
+                                    <input type="text" class="form-control" id="inputaddress3" placeholder="To" name="drop_location1">
+                                </div>
+    	                        
+    	                        <div class="form-group pull-left col-md-3" style="">
+                                    <div class='input-group date ' id='datetimepicker2'>
+                                        <input type='text' class="form-control" placeholder="Depart date and time" name="departure_datetime1"/>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+
+    	                        <div class="form-group pull-left col-md-3 " style="padding-left:0px;">
+                                    <div class='input-group date ' id='datetimepicker3'>
+                                        <input type='text' class="form-control" placeholder="Return date and time" name="return_datetime1" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>               
+    	                    
+                                <div class="form-group pull-left">
+                                        <select class="form-control" name="car1" id="car1">
+                                            <option value="" disabled selected>Select Car</option>
+                                                <option value="Hatchback">Hatchback</option>
+                                                <option value="Sedan">Sedan</option>
+                                                <option value="MUV">MUV</option>
+                                        </select>
+                                </div>    	                   
+                           </div> 
+	                    </div>
+
+                        <div class="row">
+                            <div class="col-md-6 outstations-submit-button" style="margin-top:20px;">
+                                <button type="button" onclick="getinf();" style="background-color: #2FAEFF !important;" class="btn btn-primary pull-left ">Proceed<span class="glyphicon glyphicon-arrow-right" style="margin-left:12px;"></span> </button>             
+                            </div>
+                        </div>
+         
+	   						<div class="row">
+	             
+				            	<div class="container" style="padding-top:0px;">
+					             <div class="col-md-5  col-xs-12  pull-left col-md-offset-3">
+					                
+						                <div class="form user-inf">
+						                    <div class="form-group  col-md-12">
+						                        <label class="sr-only" for="inputName">Name</label>
+						                        <input type="text" class="form-control input-group" id="inputName" placeholder="Name" name="name1">
+						                    </div>
+						                    <br><br>
+						                    <div class="form-group col-md-12">
+						                        <label class="sr-only" for="inputEmail">Email</label>
+						                        <input type="email" class="form-control input-group" id="inputEmail" placeholder="Email" name="email_id1">
+						                    </div>
+						                    <br><br>
+						                    <div class="form-group col-md-12">
+						                        <label class="sr-only" for="inputPhoneno">Phone No</label>
+						                        <input type="text" class="form-control input-group" id="inputPhoneno" placeholder="Phone Number" name="contact_number1">
+						                    </div>
+						                    <br><br>
+						                    <button type="button" onclick="savedata_outstation_round();" style="background-color: #2FAEFF !important;" class="btn btn-primary">Book</button>
+						                </div>
+						            </div>    
+						         </div>       
+		      			 </div>
+                      </form>
+                    
+            <!-- Roundtrip - Outstation End -->
+            
+                    
+
+
+
+                    <form class="form-inline one-way-trip-form">
+                        <input type="hidden" name="type2" value="One Way Trip">
+                        <div class="row">
+                             <div class="oneway col-md-12">  
+                                <div class="form-group pull-left ">                                  
+                                    <input type="text" class="form-control" id="inputaddress4" placeholder="From" name="pickup_location2">
+                                </div>
+                                <div class="form-group pull-left">              
+                                    <input type="text" class="form-control" id="inputaddress5" placeholder="To" name="drop_location2">
+                                </div>
+                                
+                                <div class="form-group pull-left col-md-3" style="">
+                                    <div class='input-group date ' id='datetimepicker4'>
+                                        <input type='text' class="form-control" placeholder="Depart date and time" name="departure_datetime2" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+         
+                                <div class="form-group pull-left">
+                                    <select class="form-control" name="car2" id="car2">
+                                        <option value="" disabled selected>Select Car</option>
+                                                <option value="Hatchback">Hatchback (Indica or similar)</option>
+                                                <option value="Sedan">Sedan (Indigo or similar)</option>
+                                                <option value="MUV">MUV (Innova or similar)</option>
+                                    </select>
+                                </div>                                    
+                            </div>    
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 outstations-submit-button1" style="margin-top:20px;">
+                                <button type="button" onclick="getinf1();" style="background-color: #2FAEFF !important;" class="btn btn-primary pull-left ">Proceed<span class="glyphicon glyphicon-arrow-right" style="margin-left:12px;"></span> </button>             
+                            </div>
+                        </div>
+
+							<div class="row">
+	             
+				            	<div class="container" style="padding-top:0px;">
+					             <div class="col-md-5  col-xs-12  pull-left col-md-offset-3">
+					                
+						                <div class="form user-inf1">
+						                    <div class="form-group  col-md-12">
+						                        <label class="sr-only" for="inputName">Name</label>
+						                        <input type="text" class="form-control input-group" id="inputName" placeholder="Name" name="name2">
+						                    </div>
+						                    <br><br>
+						                    <div class="form-group col-md-12">
+						                        <label class="sr-only" for="inputEmail">Email</label>
+						                        <input type="email" class="form-control input-group" id="inputEmail" placeholder="Email" name="email_id2">
+						                    </div>
+						                    <br><br>
+						                    <div class="form-group col-md-12">
+						                        <label class="sr-only" for="inputPhoneno">Phone No</label>
+						                        <input type="text" class="form-control input-group" id="inputPhoneno" placeholder="Phone Number" name="contact_number2">
+						                    </div>
+						                    <br><br>
+						                    <button type="button" onclick="savedata_outstation_oneway()" style="background-color: #2FAEFF !important;" class="btn btn-primary">Book</button>
+						                </div>
+						            </div>    
+						         </div>       
+						      </div>    
+
+                        </form>
+	                   
+                        <!-- One Way Trip - Outstation End -->
+
+                    </div>  
+	             </div> 
+            </div>
+
+
+            <!-- Outstation End -->
+
+                </div>
+            </div>
+            
+        </div>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+<div class="footer">
+<table>
+	<tr>
+		<td class="zero hidden-xs left"><p style="margin-left:0">&#169; 2015</p></td>
+		<td class="zero hidden-xs left"><a href="partner.html">Partner with us</a></td>
+		<td class="zero hidden-xs left"><a href="terms.html">Terms</a></td>
+		<td class="zero hidden-xs left"><a href="contactus.html">Contact Us</a></td>
+        <td class="zero hidden-xs left"><a href="#" style="text-decoration:none !important;color:inherit;font-size:inherit"  class="btn" data-popup-open="popup-1" >Popular Routes » </a></td>
+		<td style="width:100%"></td>
+		<td class="zero"><a target="_blank" id="twitter" href="https://twitter.com/route2go"></a></td>
+		<td class="zero"><a target="_blank" id="gplus" href="https://plus.google.com/u/0/101786292936778043859/posts"></a></td>
+		<td class="zero"><a target="_blank" id="facebook" href="https://www.facebook.com/route2go"></a></td>
+		<td class="zero"><a target="_blank" id="instagram" href=" https://instagram.com/route2go/" style="margin-right:0"></a></td>
+	</tr>
+</table>
+
+
+
+</div>
+
+<div id="popmenu">
+	<table id="header" class="header">
+		<tr>
+			<td class="zero hidden-xs">
+				<table>
+					<tr>
+						<td><a href="index.html" class="logo"></a></td>
+						<td class="visible-md visible-lg"><a target="_blank" href="https://twitter.com/search?q=%23OneAppAllCabs&src=typd">&#35;OneAppAllCabs</a></td>
+					</tr>
+				</table>
+			</td>
+			<td class="hidden-xs">
+				<table class="middle">
+					<tr>
+						<td><a href="about.html" style="margin-left:0px">About Us</a></td>
+						<td><a href="how.html">How Rutogo Works</a></td>
+						<td><a target="_blank" href="http://blog.rutogo.com/">Blog</a></td>
+						<td><a href="faq.html">FAQs</a></td>
+						<td><a href="jobs.html">Jobs</a></td>
+         				<td><a target="_blank"  href="http://corporate.rutogo.com/">Corporate</a></td>
+					</tr>
+				</table>
+			</td>
+			<td class="zero hidden-xs">
+				<table>
+					<tr>
+						<td class="visible-md visible-lg"><span>Download</span></td>
+						<td><a id="app-store" href="#"></a></td>
+						
+					</tr>
+				</table>
+			</td>
+			<td class="visible-xs">
+				<table>
+					<tr>
+						<td><a href="index.html" class="logo"></a></td>
+					</tr>
+				</table>
+			</td>
+			<td class="zero visible-xs">
+				<table class="middle">
+					<tr>
+						
+						<td class="menuwrapper"><a href="#" class="menu bullet">Menu</a></td>
+						<td class="closewrapper"><a href="#" class="close2 bullet">Close</a></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	
+	<div id="popcontent">
+		
+		<table>
+			<tr>
+				<td><a href="about.html">About Us</a></td>
+			</tr>
+			<tr>
+				<td><a href="how.html">How Rutogo Works</a></td>
+			</tr>
+			<tr>
+				<td><a target="_blank" href="http://blog.rutogo.com/">Blog</a></td>
+			</tr>
+			<tr>
+				<td><a href="faq.html">FAQs</a></td>
+			</tr>
+			<tr>
+				<td><a href="jobs.html">Jobs</a></td>
+			</tr>
+			<tr>
+				<td><a target="_blank"  href="http://corporate.rutogo.com/">Corporate</a></td>
+			</tr>            
+			<tr>
+				<td><a href="contactus.html">Contact Us</a></td>
+			</tr>
+		</table>
+	</div>   <!--  popcontent ends -->
+	
+</div>		<!--  popmenu ends -->
+
+<div class="popup" data-popup="popup-1">
+    <div class="popup-inner">
+        <div style="background-image:url(images/jk.png);height:150px;width:100%">
+        <font style="padding-left:10px;padding-top:10px;float:left;font-family:inherit;font-size:50px;color:inherit">Popular Routes</font>
+        <font style="padding-left:10px;padding-bottom:10px;float:left;font-family:inherit;font-size:30px;color:inherit">Its not the Destination, but the Journey</font>
+        </div>
+        
+<div class="div-table-content1 ">        
+        <div style="font-family:inherit;color:gray;">
+        <table class="table table1 ">
+        <tbody>
+        <tr><td colspan="4"><b>Popular Destination</b> </td><td></td><td></td><td></td></tr>
+        <tr>
+        <td><a  href="Delhi-to-Chandigarh-Cabs-Taxi.html" class="sumit">Delhi to Chandigarh</a></td>
+        <td><a  href="Delhi-to-Jaipur-Cabs-Taxi.html" class="sumit" >Delhi to Jaipur</a></td>
+        <td><a  href="Delhi-to-Shimla-Cabs-Taxi.html" class="sumit">Delhi to Shimla</a></td>
+        <td><a  href="Delhi-to-Manali-Cabs-Taxi.html" class="sumit">Delhi to Manali</a></td>
+        </tr>        
+        <tr>
+        <td><a  href="Delhi-to-Ludhiana-Cabs-Taxi.html" class="sumit">Delhi to Ludhiana</a></td>
+        <td><a  href="Delhi-to-Dehradun-Cabs-Taxi.html" class="sumit">Delhi to Dehradun</a></td>
+        <td><a  href="Delhi-to-Mussoorie-Cabs-Taxi.html" class="sumit">Delhi to Mussoorie</a></td>
+        <td><a  href="Delhi-to-Rishikesh-Cabs-Taxi.html" class="sumit">Delhi to Rishikesh</a></td>
+        </tr>
+        <tr>
+        <td><a  href="Chandigarh-to-Shimla-Cabs-Taxi.html" class="sumit">Chandigarh to Shimla</a></td>
+        <td><a  href="Chandigarh-to-Manali-Cabs-Taxi.html" class="sumit">Chandigarh to Manali</a></td>
+        <td><a  href="Delhi-to-Agra-Cabs-Taxi.html" class="sumit">Delhi to Agra</a></td>
+        <td><a  href="Delhi-to-Jim-Corbett-Cabs-Taxi.html" class="sumit">Delhi to Jim Corbett</a></td>
+        </tr>
+        <tr>
+        <td><a  href="Delhi-to-Nainital-Cabs-Taxi.html" class="sumit">Delhi to Nainital</a></td>
+        <td><a  href="Delhi-to-Bhopal-Cabs-Taxi.html" class="sumit">Delhi to Bhopal</a></td>
+        <td><a  href="Delhi-to-Haridwar-Cabs-Taxi.html" class="sumit">Delhi to Haridwar</a></td>
+        <td><a  href="Delhi-to-Jodhpur-Cabs-Taxi.html" class="sumit">Delhi to Jodhpur</a></td>    
+        </tr>   
+        <tr>    
+        <td><a  href="Delhi-to-Amritsar-Cabs-Taxi.html" class="sumit">Delhi to Amritsar</a></td>
+        <td><a  href="Delhi-to-Jammu-Cabs-Taxi.html" class="sumit">Delhi to Jammu</a></td>
+        <td><a  href="Delhi-to-Khajuraho-Cabs-Taxi.html" class="sumit">Delhi to Khajuraho</a></td>
+        <td><a  href="Delhi-to-Mathura-Cabs-Taxi.html" class="sumit">Delhi to Mathura</a></td>
+        </tr>					
+				
+        <tr><td colspan="4" ><b>Adventure Destination</b> </td><td></td><td></td><td></td></tr>
+        <tr>
+        <td><a  href="Delhi-to-Dalhousie-Cabs-Taxi.html" class="sumit">Delhi to Dalhousie</a></td>
+        <td><a  href="Delhi-to-Manali-Cabs-Taxi.html" class="sumit">Delhi to Manali</a></td>
+        <td><a  href="Delhi-to-Rishikesh-Cabs-Taxi.html" class="sumit">Delhi to Rishikesh</a></td>
+        <td><a  href="Delhi-to-Auli-Cabs-Taxi.html" class="sumit">Delhi to Auli</a></td> 
+        </tr>   
+        <tr>        
+        <td><a  href="Delhi-to-MountAbu-Cabs-Taxi.html" class="sumit">Delhi to MountAbu</a></td>
+        <td><a  href="Delhi-to-Almora-Cabs-Taxi.html" class="sumit">Delhi to Almora</a></td>
+        <td><a  href="Delhi-to-Neemrana-Cabs-Taxi.html" class="sumit">Delhi to Neemrana</a></td>
+        <td><a  href="Delhi-to-Ranikhet-Cabs-Taxi.html" class="sumit">Delhi to Ranikhet</a></td>
+        </tr>       
+        <tr>
+        <td><a  href="Delhi-to-Ladakh-Cabs-Taxi.html" class="sumit">Delhi to Ladakh</a></td><td></td><td></td><td></td>
+        </tr> 
+        
+        <tr><td colspan="4"><b>HillStation</b></td><td></td><td></td><td></td></tr>
+        <tr>     
+        <td><a  href="Delhi-to-Kasauli-Cabs-Taxi.html" class="sumit">Delhi to Kasauli</a></td>
+        <td><a  href="Delhi-to-Dharmshala-Cabs-Taxi.html" class="sumit">Delhi to Dharmshala</a></td>
+        <td><a  href="Delhi-to-Shimla-Cabs-Taxi.html" class="sumit">Delhi to Shimla</a></td>
+        <td><a  href="Delhi-to-Dhanaulti-Cabs-Taxi.html" class="sumit">Delhi to Dhanaulti</a></td>
+        </tr>         
+        <tr>
+        <td><a  href="Delhi-to-Binsar-Cabs-Taxi.html" class="sumit">Delhi to Binsar</a></td><td></td><td></td><td></td>
+        </tr> 
+
+        <tr><td colspan="4"><b>Weekend Destination</b></td><td></td><td></td><td></td></tr>
+        <tr>     
+        <td><a  href="Delhi-to-Lansdowne-Cabs-Taxi.html" class="sumit">Delhi to Lansdowne</a></td>
+        <td><a  href="Delhi-to-Alwar-Cabs-Taxi.html" class="sumit">Delhi to Alwar</a></td>
+        <td><a  href="Delhi-to-Bharatpur-Cabs-Taxi.html" class="sumit">Delhi to Bharatpur</a></td>
+        <td><a  href="Delhi-to-Dehradoon-Cabs-Taxi.html" class="sumit">Delhi to Dehradoon</a></td>
+        </tr>         
+        <tr>
+        <td><a  href="Delhi-to-Haridwar-Cabs-Taxi.html" class="sumit">Delhi to Haridwar</a></td><td></td><td></td><td></td>
+        </tr>         
+        </tbody>
+        </table>
+    </div></div>
+                <p style="font-family:inherit;color:gray;align-self:center;padding-left:10px;padding-top:5px;padding-bottom:5px">
+<a data-popup-close="popup-1" href="#">Close</a></p>
+        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+    </div>
+</div>
+<div id="blocker"></div></body>	
+
+
+
+
+    <!-- jQuery -->
+    <script src="javascripts/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="javascripts/bootstrap.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="javascripts/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="javascripts/grayscale.js"></script>
+    <script src="javascripts/moment.js"></script>
+    <script src="javascripts/id.js"></script>
+    <script src="javascripts/bootstrap-datetimepicker.min.js"></script>
+
+
+<script type="text/javascript">
+    
+$(document).ready(function(){
+    $('.hourly-button').click(function(){
+        $('.hourly-form').show();
+        $(".round-trip-form").hide();
+        $(".one-way-trip-form").hide();
+        $(".outstations").hide();
+        $(".hourly-button").addClass("active");
+        $(".hourly-button").removeClass("unactive");
+        $(".outstations-button").removeClass("active");
+        $(".outstations-button").addClass("unactive");
+    });
+
+    $('.outstations-button').click(function(){
+        $('.hourly-form').hide();
+        $(".round-trip-form").hide();
+        $(".outstations").show();
+        $(".one-way-trip-form").show();
+        $(".hourly-button").addClass("unactive");
+        $(".hourly-button").removeClass("active");
+        $(".outstations-button").removeClass("unactive");
+        $(".outstations-button").addClass("active");
+    });
+
+}); 
+</script>
+<script type="text/javascript">
+    
+$(document).ready(function(){
+    $('input[type="radio"]').click(function(){
+        if($(this).attr("value")=="0"){
+            $(".round-trip-form").hide();
+            $(".one-way-trip-form").show();
+            $('.outstations-submit-button').hide();
+            $('.outstations-submit-button1').show();
+        }
+        if($(this).attr("value")=="1"){
+            $(".one-way-trip-form").hide();
+            $(".round-trip-form").show();
+            $('.outstations-submit-button').show();
+            $('.outstations-submit-button1').hide();
+        }
+    });
+}); 
+</script>
+
+<script type="text/javascript">
+    function getinfo(){
+    if ( ($('input[name=type]').val().length>0)   &&
+        ($('input[name=pickup_location]').val().length>0)   &&
+        ($('input[name=departure_datetime]').val().length>0)  &&
+        ($('#car').val().length>0) ) {
+
+        	$('#optionsRadios1').attr('disabled',true);
+        	$('#optionsRadios2').attr('disabled',true);
+            $(".hourly").hide();
+            $(".outstations").hide();
+            $('.hourly-submit-button').hide();
+            $('.outstations-submit-button').hide();
+            $('.trip').hide();
+            $('.user-info').show();
+    }
+
+    else{
+        alert("Please complete the details");
+    }
+
+    }
+</script>
+<script type="text/javascript">
+    function getinf(){
+    if (($('input[name=pickup_location1]').val().length>0)   &&
+        ($('input[name=departure_datetime1]').val().length>0)  &&
+        ($('#car1').val().length>0) &&
+        ($('input[name=drop_location1]').val().length > 0)  &&
+        ($('input[name=return_datetime1]').val().length>0)
+        ) {
+
+        	$('#optionsRadios1').attr('disabled',true);
+        	$('#optionsRadios2').attr('disabled',true);
+            $(".hourly").hide();
+            $('.roundtrip').hide();
+            $('.oneway').hide();
+            $('.one-round-radio').hide();
+            $('.hourly-submit-button').hide();
+            $('.outstations-submit-button').hide();
+            $('.trip').hide();
+            $('.user-inf').show();
+        }
+
+        else{
+            alert("Please complete the details");
+        }
+    }
+</script>
+<script type="text/javascript">
+    function getinf1(){
+
+    if (($('input[name=pickup_location2]').val().length>0)   &&
+        ($('input[name=departure_datetime2]').val().length>0)  &&
+        ($('#car2').val().length>0) &&
+        ($('input[name=drop_location2]').val().length > 0)
+        ) {
+
+        	$('#optionsRadios1').attr('disabled',true);
+        	$('#optionsRadios2').attr('disabled',true);
+            $(".hourly").hide();
+            $('.roundtrip').hide();
+            $('.oneway').hide();
+            $('.one-round-radio').hide();
+            $('.hourly-submit-button').hide();
+            $('.outstations-submit-button1').hide();
+            $('.trip').hide();
+            $('.user-inf1').show();
+        }
+
+        else{
+            alert("Please complete the details");
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    function scroll(){
+
+        $("html,body").animate({
+            scrollTop : $(document).height() - $(window).height()
+        });
+    }
+</script>
+<script type="text/javascript">
+	$(function () {
+		$('#datetimepicker1').datetimepicker({
+			locale: 'id'
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function () {
+		$('#datetimepicker2').datetimepicker({
+			locale: 'id'
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function () {
+		$('#datetimepicker3').datetimepicker({
+			locale: 'id'
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function () {
+		$('#datetimepicker4').datetimepicker({
+			locale: 'id'
+		});
+	});
+</script>
+<script type="text/javascript">
+function initialize() {
+    var input = document.getElementById('inputaddress');
+    var options = {componentRestrictions: {country: 'ind'}};
+                 
+    new google.maps.places.Autocomplete(input, options);
+}
+             
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<script type="text/javascript">
+function initialize() {
+    var input = document.getElementById('inputaddress2');
+    var options = {componentRestrictions: {country: 'ind'}};
+                 
+    new google.maps.places.Autocomplete(input, options);
+}
+             
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<script type="text/javascript">
+function initialize() {
+    var input = document.getElementById('inputaddress3');
+    var options = {componentRestrictions: {country: 'ind'}};
+                 
+    new google.maps.places.Autocomplete(input, options);
+}
+             
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<script type="text/javascript">
+function initialize() {
+    var input = document.getElementById('inputaddress4');
+    var options = {componentRestrictions: {country: 'ind'}};
+                 
+    new google.maps.places.Autocomplete(input, options);
+}
+             
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<script type="text/javascript">
+function initialize() {
+    var input = document.getElementById('inputaddress5');
+    var options = {componentRestrictions: {country: 'ind'}};
+                 
+    new google.maps.places.Autocomplete(input, options);
+}
+             
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+
+<script type="text/javascript">
+            function savedata_hourly(){
+
+            if ( ($('input[name=name]').val().length>0)   &&
+                ($('input[name=email_id]').val().length>0)   &&
+                ($('input[name=contact_number]').val().length>0)
+                ) {
+
+                    var pickup_location = $("input[name=pickup_location]").val();
+                    var type = $("input[name=type]").val();
+                    var departure_datetime = $("input[name=departure_datetime]").val();
+                    var car = $("#car").val();
+                    var name = $("input[name=name]").val();
+                    var email_id = $("input[name=email_id]").val();
+                    var contact_number = $("input[name=contact_number]").val();
+                    //alert(car);
+                    //alert(pickup_location+type+departure_datetime+car+name+email_id+contact_number);
+
+                    $.ajax({
+                        type:"POST",
+                        url:"hourly_rentals.php",
+                        data:"pickup_location="+pickup_location+"&type="+type+"&departure_datetime="+departure_datetime+"&car="+car+"&name="+name+"&email_id="+email_id+"&contact_number="+contact_number,
+                        dataType:"html",
+
+                        success: function(response){
+                            //alert("Value Entered successfully");
+                             window.location.assign("confirmation.html");
+                        }
+                    });
+                }
+                else{
+                    alert("Please complete the details");
+                }
+            }
+        </script>
+
+        <script type="text/javascript">
+            function savedata_outstation_round(){
+
+            if ( ($('input[name=name1]').val().length>0)   &&
+                ($('input[name=email_id1]').val().length>0)   &&
+                ($('input[name=contact_number1]').val().length>0)
+                ) {
+                    var pickup_location1 = $("input[name=pickup_location1]").val();
+                    var drop_location1 = $("input[name=drop_location1]").val();
+                    var type1 = $("input[name=type1]").val();
+                    var departure_datetime1 = $("input[name=departure_datetime1]").val();
+                    var car1 = $("#car1").val();
+                    var name1 = $("input[name=name1]").val();
+                    var email_id1 = $("input[name=email_id1]").val();
+                    var contact_number1 = $("input[name=contact_number1]").val();
+                    var return_datetime1 = $("input[name=return_datetime1]").val();
+                    
+                    
+
+                    $.ajax({
+                        type:"POST",
+                        url:"outstations.php",
+                        data:"pickup_location="+pickup_location1+"&drop_location="+drop_location1+"&type="+type1+"&departure_datetime="+departure_datetime1+"&return_datetime="+return_datetime1+"&car="+car1+"&name="+name1+"&email_id="+email_id1+"&contact_number="+contact_number1,
+                        dataType:"html",
+
+                        success: function(response){
+                            //alert("Value Entered successfully");
+                            window.location.assign("confirmation.html");
+                        }
+                    });
+                }
+
+                else{
+                    alert("Please complete the details");
+                }
+                //alert(pickup_location1+drop_location1+type1+departure_datetime1+return_datetime1+car1+name1+email_id1+contact_number1);
+             }
+        </script>
+
+        <script type="text/javascript">
+
+            function savedata_outstation_oneway(){
+
+            if ( ($('input[name=name2]').val().length>0)   &&
+                ($('input[name=email_id2]').val().length>0)   &&
+                ($('input[name=contact_number2]').val().length>0)
+                ) {
+
+                    var pickup_location2 = $("input[name=pickup_location2]").val();
+                    var drop_location2 = $("input[name=drop_location2]").val();
+                    var type2 = $("input[name=type2]").val();
+                    var departure_datetime2 = $("input[name=departure_datetime2]").val();
+                    var car2 = $("#car2").val();
+                    var name2 = $("input[name=name2]").val();
+                    var email_id2 = $("input[name=email_id2]").val();
+                    var contact_number2 = $("input[name=contact_number2]").val();
+                    var return_datetime2 = "N.A";
+
+                    $.ajax({
+                        type:"POST",
+                        url:"outstations.php",
+                        data:"pickup_location="+pickup_location2+"&drop_location="+drop_location2+"&type="+type2+"&departure_datetime="+departure_datetime2+"&return_datetime="+return_datetime2+"&car="+car2+"&name="+name2+"&email_id="+email_id2+"&contact_number="+contact_number2,
+                        dataType:"html",
+
+                        success: function(response){
+                            //alert("Value Entered successfully");
+                            window.location.assign("confirmation.html");
+                        }
+                    });
+                }
+
+                else{
+                    alert("Please complete the details");
+                }
+
+                //alert(pickup_location2+drop_location2+type2+departure_datetime2+return_datetime2+car2+name2+email_id2+contact_number2);
+            }
+        </script>
+</body>
+
+</html>

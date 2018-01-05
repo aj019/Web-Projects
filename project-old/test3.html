@@ -1,0 +1,108 @@
+<html>
+<head>
+
+	<style type="text/css">
+
+		.left_bar{
+
+			background-color: red;
+			width: 50%;
+			height: 800px;
+			display: inline-block;
+		}
+
+		.right_bar{
+			float: right;
+		display: inline-block;
+		width: 49%;
+		}
+
+		.background{
+			width: 1500px;
+			height: 1000px;
+			clear: both;
+		}
+
+	</style>
+	<title></title>
+</head>
+<body>
+
+	<div class="background">
+	<div class="left_bar">
+		<div class="form-container">
+
+			<div class="main-body" id="main">
+
+			</div>
+
+		</div>
+
+
+
+	</div>
+
+
+	<div class="right_bar">
+		<form method="POST" action="test3.php"> 
+		<script src="ckeditor/ckeditor.js">
+		</script>
+		<textarea cols="20" rows="20" id="ckeditor" name="editor1"></textarea>
+		<script>
+		CKEDITOR.replace( 'editor1' );
+		</script>
+
+		<button>CREATE</button>
+	</form>
+	</div>
+	</div>		
+
+</body>
+
+<!--<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+	
+	$('.form-container div').click(function(){
+		name = $('input').val();
+		note = $('textarea').val();
+//		time = Date.getTime();
+		create(name,note,time);
+	});
+	function create(name,note,time){
+		
+		main_body = document.getElementById('main');
+
+		list_element = document.createElement('div');
+		
+		list_div = document.createElement('div');
+		list_div_text=document.createTextNode(name);
+		list_div.appendChild(list_div_text);
+		list_element.appendChild(list_div);
+		$(list_element).attr('class','lists');
+
+		$(list_element).attr('id','list1');
+
+	/*	list_span = document.createElement('span');
+		list_span_text=document.createTextNode(time);
+		list_span.appendChild(list_span_text);
+		list_element.appendChild(list_span);*/
+
+		main_note = document.createElement('div');
+		main_note_text = document.createTextNode(note);
+		main_note.appendChild(main_note_text);
+		$(main_note).attr('class','note');
+		$(main_note).attr('id','note4');
+		main_body.appendChild(list_element);
+		main_body.appendChild(main_note);
+		$(list_element).click(function(){
+		id = $(this).attr('id');		
+		id = id.split('list');	
+		id=id[1];				
+		$('#note'+id).fadeToggle();
+	});
+	}
+	});
+</script>-->
+</html>

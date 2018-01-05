@@ -1,0 +1,21 @@
+<html>
+<head>
+		<title></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<img src="foo.jpg">
+</body>
+</html>
+<script type="text/javascript">
+	$image = 'foo.jpg';
+	$watermark = 'watermark.png';
+	$imagesize = getimagesize($image);
+	$watermarksize = getimagesize($watermark);
+	$img = imagecreatetruecolor($imagesize[0], $imagesize[1] + $watermarksize[1]);
+	imagecopy($img, imagecreatefromjpeg($image), 0, 0, 0, 0, $imagesize[0], $imagesize[1]);
+	imagecopy($img, imagecreatefrompng($watermark), 0, $imagesize[1], 0, 0, $watermarksize[0], $watermarksize[1]);
+	imagejpeg($img);
+
+</script>

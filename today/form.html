@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+</head>
+<style type="text/css">
+
+
+
+#sighnup{
+
+border: 2px solid black;
+background-color: #ecf0f1;
+width: 361px;
+height: 342px;
+margin-left: 399px;
+}	
+
+button
+{
+
+background-color: #bdc3c7;
+
+}
+
+label{
+
+font: vardana ;
+
+}
+
+body{
+
+	background-color: grey;
+}
+
+h1{
+	margin-left: 420px;
+}
+</style>
+
+
+
+<body>
+
+<form action="sighnup.php" method="post" enctype="multipart/form-data">
+
+   <h1>SIGHN UP</h1>
+
+  <div id='sighnup'>
+     <label>NAME:</label>
+        <input type ="text" name ="name"><br><br>
+     <label>DATE OF BIRTH:</label>
+        <input type ="date" name ="dob"><br><br>
+     <label>USERNAME:</label>
+        <input type ="text" name ="username"><br><br>
+     <label>PASSWORD:</label>
+        <input type ="password" name ="password"><br><br>
+     <label>RETYPE PASSWORD:</label>
+        <input type ="password" name ="repassword"><br><br>
+     <label>INPUT PICTURE:</label>
+        <input type ="file" name="profile" accept=".jpg,.png"><br><br>
+ <input type="submit" value="sighnup">
+
+
+   </div>
+</form>
+</body>
+</html>

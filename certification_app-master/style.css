@@ -1,0 +1,116 @@
+.anim{
+	animation: fade 5s;
+	left: 20%;
+	opacity: 1;
+}
+
+@keyframes fade{
+	0%{
+		left: -20%;
+		opacity: 0;
+	}
+	100%{
+		left: 20%;
+		opacity: 1;
+	}
+}
+
+.plays{
+	top: 25%;
+	right: 10%;
+	animation: slidesin 5s;
+}
+
+.fb{
+
+	top:60%;
+	right:10%;
+	animation: slidesleft 5s;
+}
+.plays h1{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 5em;
+}
+
+.plays p{
+	font-size: 2em;
+}
+
+@keyframes slidesin{
+	0%{
+		top: -10%;
+	}
+	100%{
+		top: 25%;
+	}
+}
+
+@keyframes slidesleft{
+	0%{
+		right: -10%;
+	}
+	100%{
+		right: 10%;
+	}
+}
+
+.anim img{
+	animation: bgchange 15s infinite;
+}
+
+@keyframes bgchange{
+	
+	0%{
+		content : url("img/2.png");
+	}20%{
+		content : url("img/1.png");
+	}
+	40%{
+		content : url("img/8.png");
+	}
+	60%{
+		content : url("img/3.png");		
+	}
+	80%{
+		content : url("img/5.png");		
+	}
+	100%{
+		content : url("img/4.png");				
+	}
+}
+
+@media only screen and (max-width: 720px){
+	body{
+		background: url('img/screen_opa.png');
+		background-opacity: 0.5;
+		color: #fff;
+	}
+
+	.anim{
+		display: none;
+		animation: none;
+		position: relative;
+		opacity: 0.5;
+	}
+
+	.plays{
+		animation: none;
+		position: relative;
+		text-align: center;
+		top: none;
+		bottom: 5%;
+		color: #fff;
+	}
+
+	.plays h1{
+		font-family: 'Roboto', sans-serif;
+		font-weight: 200;
+		font-size: 5em;
+	}
+
+	.plays p{
+		font-size: 2em;
+	}
+
+}

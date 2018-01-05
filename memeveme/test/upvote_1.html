@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title></title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<style type="text/css">
+
+		.vote {
+			display: inline-block;
+			overflow: hidden;
+			width: 40px;
+			height: 25px;
+			cursor: pointer;
+			background: url('http://i.stack.imgur.com/iqN2k.png');
+			background-position: 0 -25px;
+		} 
+
+		.vote.on {
+  			background-position: 0 2px;
+		}
+
+	/*	.vote{
+			background-image: url("upvote.png");
+			width: 10px;
+		}
+
+		.vote.on{
+			background-image: url("upvote_disabled.png");
+			width: 10px;
+		}*/
+	</style>
+</head>
+<body>
+
+	Click to vote: 
+	<br>
+	<br>
+	<br>
+	<p>12</p>
+	<span class="vote"></span>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	$('.vote').click(function () {
+		var score=$('p').val();
+		score++;
+		$('p').text(score);
+  		$(this).toggleClass('on');
+	});
+</script>

@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Javascript Beginning</title>
+	<style type="text/css">
+		#testing{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="testing">
+		Content is Here!
+	</div>
+	<button id='clicker'>Click Here!</button>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$("#clicker").click(function(){
+			$("#testing").slideToggle();			
+		});
+	
+	});
+</script>
+</body>
+</html>

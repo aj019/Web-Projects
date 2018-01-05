@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX</title>
+</head>
+
+<style type="text/css">
+	
+	img {
+
+		display:none;
+	}
+</style>
+<body>
+
+	<div class='form'>
+	<label>name</label>
+		<input type ='text' name="username"id='user'>
+	<label>password</label>	
+		<input type = "password" name="password"  id="pass" >
+		<button id ="logger">LOGIN </button>
+
+
+
+	</div>
+    <div class='load'>
+     <img src="2.png">
+    	
+    </div>
+
+
+
+
+
+<script type="text/javascript" src="jquery.js"></script>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+      $('#logger').click(function(){
+		name=$('#user').val();
+        pass=$('#pass').val();
+      $.ajax({
+
+  	  url:'ajax.php',
+
+  	   type: 'POST',
+  
+       data:{username: name , password:pass},
+       beforeSend:function(){
+       	$('.load').toggle();
+       },
+
+         success:function(data,status){
+       }
+    	alert(status);
+        }
+     });
+
+  });
+});
+</script>
+</body>
+</html>

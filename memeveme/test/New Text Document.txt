@@ -1,0 +1,4 @@
+autosuggest
+
+http://forums.phpfreaks.com/topic/210274-ajax-js-php-predictive-text/
+http://papermashup.com/jquery-php-ajax-autosuggest/

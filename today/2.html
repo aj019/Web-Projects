@@ -1,0 +1,39 @@
+<?php
+
+// Inialize session
+session_start();
+
+// Check, if user is already login, then jump to secured page
+if (isset($_SESSION['username'])) {
+header('Location: profile.php');
+}
+
+?>
+
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div class="heading">
+	SIGN IN
+	</div>
+
+	<br>
+	<br>
+	<form method="POST" action="signin.php">
+	<div>
+
+		<div class="tag1">Username:</div><input type="text" placeholder="Username" name="username">
+		<br><br>
+		<div class="tag2">Password:</div><input type="password" placeholder="Password" name="password">
+		<br>
+		<button class="submit">SUBMIT</button>
+
+
+	</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!--<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<input type="text" id="formValueId" name="valueId">
+		<input type="button"  id="theButton">
+	</form>
+
+	<p id="text"></p>
+</body>
+</html>
+<script type="text/javascript">
+	var button = document.getElementById("theButton"),
+	value =  button.form.valueId.value;
+	button.onclick = function() {
+		$('#text').click
+	}
+</script>-->
+
+<html>
+<head>
+<script language="JavaScript">
+  function pprint(){
+   var tf = document.getElementById('tf');
+   var a = tf.value;
+   var elem = document.getElementById('text');
+    elem.innerHTML = a;
+  }
+ </script>
+</head>
+<body>
+<input type="text" id="tf"  value="Test">
+<input type="button" onClick="pprint()" value="print">
+<p id="text"></p>
+</body>
+</html>

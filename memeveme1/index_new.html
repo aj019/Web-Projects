@@ -1,0 +1,575 @@
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Expletus+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,500' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+
+		body{
+			margin: 0;
+		}
+
+		.outer-wrapper{
+			width: 100%;
+			height: 100%;
+			background-color: #f6f5f6;
+		}
+
+		.menu-container{
+			width: 100%;
+			height: 12%;
+
+		}
+
+		.menu-items{
+			width: 100%;
+			height: 100%;
+		}
+
+		.first-bar{
+			height: 45%;
+			background-color: #354147;
+		}
+
+
+		.second-bar{
+			height: 65%;
+			background-color: #FFFFFF;
+			box-shadow: 0px 4px #BDC3C7;
+
+		}
+
+		.logo-container{
+			height: 95px;
+			width: 95px;
+			float: left;
+			margin-left: 5%;
+		}
+
+		#memeveme-logo{
+			width: 100%;
+			height: 100%;
+		}
+
+		.name-container{
+
+			height:100%;
+			width: 30%;
+			display: inline-block;
+		}
+		#name{
+			height: 80%;
+			margin-left: 40px;
+			padding: 3px;
+		}
+
+		.first-bar-table{
+			display: inline-block;
+			height: 100%;
+			width: 50%;
+		}
+		
+
+		.first-bar-table table{
+			width: 100%;
+			height: 100%;
+			font-family: 'Lato', sans-serif;
+			color: #D2D7D3;
+			font-size: 16px;
+			text-align: center;
+		}
+
+		.first-bar-table table a{
+			text-decoration: none;
+			color: #D2D7D3;
+		}
+
+		.first-bar-table table a:hover{
+			color: white;
+		}
+
+		.first-bar-table table td{
+		}
+
+		.first-bar-table table button{
+			background-color: #33688E;
+			border: 0;
+			color: #D2D7D3;
+			cursor: pointer;
+			border: #33688E solid 1px;
+			font-family: 'Lato', sans-serif;
+			border-radius: 3px;
+			font-size: 16px;
+			width: 100%;
+			height: 95%;
+		}
+
+		.first-bar-table table button:hover{
+			background-color: #169e80;
+			border: #169e80 solid 1px;
+			color: white;
+		}
+		
+		.second-bar-table{
+			height: 100%;
+			margin-left: 15%;
+			
+		}
+
+		.second-bar-table table{
+			width: 60%;
+			text-align: center;
+			padding: 1.5%;
+
+		}
+
+		.second-bar-table table a{
+			text-decoration: none;
+			color: #6C7A89;
+			font-size: 20px;
+			font-family: 'Expletus Sans', cursive;	
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.second-bar-table table td a:hover{
+			color: #282828;
+		}
+
+
+		.second-bar-table table td{
+		}
+
+		
+		/*Search Bar*/
+
+		#search_bar {
+			outline: none;
+			-webkit-appearance: textfield;
+			-webkit-box-sizing: content-box;
+			font: 90%/180% Arial, Helvetica, sans-serif;
+
+			font-size: 100%;
+		}
+
+		#search_bar{
+			background: #ededed url(resources/search-icon.png) no-repeat 9px center;
+			border: solid 1px #ccc;
+			padding: 0px 10px 0px 30px;
+			width: 70px;
+			
+			-webkit-border-radius: 10em;
+			-moz-border-radius: 10em;
+			border-radius: 10em;
+			
+			-webkit-transition: all .5s;
+			-moz-transition: all .5s;
+			transition: all .5s;
+		}
+		#search_bar:focus {
+			width: 130px;
+			background-color: #fff;
+			border-color: #66CC75;
+			
+			-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+			-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+			box-shadow: 0 0 5px rgba(109,207,246,.5);
+		}
+
+
+		#search_bar:-moz-placeholder {
+			color: #999;
+		}
+		#search_bar::-webkit-input-placeholder {
+			color: #999;
+		}
+
+		/*Search Bar*/
+
+
+		/*connect popup*/
+		#light{
+        display: none;
+        position: absolute;
+        top: 25%;
+        left: 37.5%;
+        width: 25%;
+        height: 50%;
+        background-color: #fff;
+        background-size: 100% 100%;
+        z-index:1002;
+        border-radius: 10px;
+        overflow:visible;
+    }
+
+    #fade{
+        display: none;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: #404040;
+        z-index:1001;
+        -moz-opacity: 0.7;
+        opacity:.70;
+        filter: alpha(opacity=70);
+
+        -webkit-filter: blur(100%);
+        -moz-filter: blur(100%);
+        -o-filter: blur(100%);
+        -ms-filter: blur(100%);
+        filter: blur(100%);
+    }
+
+
+    .ribbon{
+      width: 100%;
+      height: 2%;
+      background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+      background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+      background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+      background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+
+    .top-connect{
+      height: 20%;
+      width: 100%;
+     
+      background: #f7f7f7;
+      font-family: 'Raleway', sans-serif;
+      font-size: 30px; 
+      color: #aaa;
+    }
+
+
+    .top-connect p {
+      text-align: center;
+      padding-top: 6%;
+      margin: 5%;
+    }
+
+    .bottom-connect{
+      height: 78%;
+      width: 100%;
+    }
+
+
+    .connect-button{
+      border-radius: 5px;
+      border: 0;
+      height: 15%;
+      width: 90%;
+      cursor: pointer;
+      margin-bottom: 10%;    
+    }
+
+    .connect-button:focus{
+      outline: 0;
+    }
+
+    #fb{
+      background-color: #3b5998;
+      box-shadow: 0 5px 0 #4B77BE;
+      transition: all .1s linear;
+      margin-top: 5%;
+    }
+
+    #fb:active{
+        box-shadow: 0 2px 0 #4B77BE;
+          transform: translateY(3px);
+      }
+
+    #twitter{
+      background-color: #9AE4E8;
+      box-shadow: 0 5px 0 #b5ecf7;
+      transition: all .1s linear;
+    }
+
+    #twitter:active{
+      box-shadow: 0 2px 0 #b5ecf7;
+        transform: translateY(3px);
+    }
+
+
+    #gplus{
+      background-color: #d34836;
+      box-shadow: 0 5px 0 #ef7775;
+      transition: all .1s linear;
+    }
+
+    #gplus:active{
+      box-shadow: 0 2px 0 #ef7775;
+        transform: translateY(3px);
+    }
+
+    .connect-button-img{
+      height: 90%;
+    }
+
+    /*connect popup*/
+
+
+    /*---------Drop down menu------------*/
+   	 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,500);
+
+		
+		/*
+		  navigation bar
+		*/
+		.second-bar-nav {
+		  	list-style: none;
+		  	font-size: 26px;
+			font-family: 'Ubuntu', sans-serif;
+		  	font-weight: 300;
+		  	margin: 0;
+		  	margin-left: 12%;
+		  	height: 100%;
+		  	width: 45%;
+		}
+
+		/* 
+		  top menu list items
+
+		  1. stack top links side by side 
+		  2. needed for absolute positioning of   submenu
+		*/
+		.second-bar-nav li {
+		  float: left; /*1*/
+		  position: relative; /*2*/
+		  height: 57%;
+		  padding-left: 6%;
+		  padding-right: 6%;
+		  padding-top: 2%;
+		  padding-bottom: 2%;
+		}
+
+		/*
+		  all links - these styles will cascade down to submenu (some will be overwritten further down)
+		*/
+
+		/*
+		  1. make links block item
+		  2. remove link underline
+		*/
+		.second-bar-nav li a {
+		  display: block; /*1*/
+		  text-decoration: none; /*2*/
+		  color: #354147;
+		  height: 100%;
+		}
+
+		/*
+		    on hovering over ul make links fade out
+		*/
+		.second-bar-nav:hover li a {
+		  opacity: .5;
+		}
+
+		/*
+		  override previous rule for when hovering over individual link
+		*/
+		.second-bar-nav li:hover a {
+		  opacity: 1;
+		}
+		/* 
+		  submenu default styles
+
+		  1. keeps submenu relative to parent
+		  2. creates (illusion of) margin but stops submenu dissappearing when hovering in space
+		  3. hide - CHANGE
+		*/
+		.second-bar-nav-submenu {
+		  position: absolute; /*1*/
+		  border-top: 15px solid transparent; /*2*/
+		  display: none;
+		  width: 20%;
+		}
+
+		/*
+		  show submenu 
+
+		  1. show sub
+		*/
+		.second-bar-nav li:hover > .second-bar-nav-submenu {
+			display: block;
+		}
+
+		/*
+		  WORK IN PROGRESS (spacing could be better)
+
+		  CSS down arrow for top menu
+		  2. Hide off screen
+
+		*/
+		.has-submenu:after {
+		   position: relative;
+		   content: "";
+		   top: 50%;
+		   margin: 0 -5px 4px 5px;
+		   /* borders to make down arrow */
+			 border-left: 7px solid transparent;
+			 border-right: 7px solid transparent;
+			 border-top: 7px solid #3498DB;
+		   opacity: .7;
+		}
+
+		/*
+		  down arrow hover style
+		*/
+		.second-bar-nav > li:hover .has-submenu:after {
+		  opacity: 1;
+		} 
+
+		/* 
+		  1. prevent multi line submenu items 
+		  2. tidy up padding on submenu items
+		*/
+		.second-bar-nav-submenu li {
+		  white-space: nowrap; /*1*/
+		  padding: 1px; /*2*/
+		  width: 100;
+		}
+
+		
+		.second-bar-nav > li:hover  {
+		  background: #D2D7D3;
+		} 
+
+		/* 
+		  submenu links 
+
+		  styles are inherited from .nav li a, so some adjustments are made here.
+
+		  1. make slightly smaller
+		  2. margin means on hover bg doesn't touch the edges
+		*/
+		.second-bar-nav-submenu a {
+		  font-size: 85%; /*1*/
+		  margin: 3px; /*2*/
+		  border-radius: 5px;
+		}
+
+		/* 
+		  submenu hover styles
+		*/
+		.second-bar-nav-submenu li:hover {
+		  background: #3498DB;
+		}
+
+
+
+	</style>
+	<title></title>
+</head>
+<body>
+
+	<div class="outer-wrapper">
+		<div class="menu-container">
+			<div class="logo-container">
+				<img id="memeveme-logo" src="resources/memeveme_logo.png">
+			</div>
+
+			<div class="first-bar">
+				<div class="name-container">
+				<img src="resources/memeveme2.png" id="name">
+				</div>
+				<div class="first-bar-table">
+				<table>
+					<tr>
+						<td style="width: 31%;">
+							<form style="margin-bottom: 0;">
+								<input type="search" placeholder="Search" name="search_bar" id="search_bar">
+							</form>
+
+						</td>
+						<!--<td style="width: 23%;"><a href="#">BADGES</a></td>-->
+						<td style="width: 23%;">  <a href="#" onClick="lightbox_open();">CONNECT</a></td>
+						<td style="width: 23%;"> <a href = "upload/upload.html"><button>UPLOAD</button></a></td>
+					</tr>
+				</table>
+				</div>
+			</div>
+			
+			<div class="second-bar">
+				<nav role="navigation">
+	
+					<ul class="second-bar-nav">
+				  		<li><a href="">Top</a></li>
+				  		<li><a href="">Popular</a></li>
+						<li><a href="">New</a></li>
+
+				  		<li><a href="" class="has-submenu">More</a>
+				    		<ul class="second-bar-nav-submenu" style="padding-left:0;">
+				      			<center>
+				      			<li><a href="">Memes</a></li>
+				      			<li><a href="">Gif</a></li>
+				      			<li><a href="">Videos</a></li>
+				      			<li><a href="">NSFW</a></li>
+				      		</center>
+				    		</ul>
+				  		</li>  
+					</ul>
+
+				</nav>	
+				
+			</div>
+			</span>
+		</div>
+	
+		<div id="light">
+	      	<div class="ribbon"></div>
+	      	<div class="top-connect"><p>Connect</p></div>      
+
+	      	<div class="bottom-connect">
+		        <center>
+		        <button class="connect-button" id="fb" alt="Facebook"><img class="connect-button-img" src="_old/facebook.png"></button>
+		        <br>
+		        <button class="connect-button" id="twitter" alt="Twitter"><img class="connect-button-img" src="_old/twitter.png"></button>
+		        <br>
+		        <button class="connect-button" id="gplus" alt="Google Plus"><img class="connect-button-img" src="_old/google.png"></button>
+		        </center>
+	      	</div>
+    	</div>
+    
+    	<div id="fade" onClick="lightbox_close();"></div>   
+
+	</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+  
+  function lightbox_open(){
+      window.scrollTo(0,0);
+      document.getElementById('light').style.display='block';
+      document.getElementById('fade').style.display='block';  
+  }
+
+  function lightbox_close(){
+      document.getElementById('light').style.display='none';
+      document.getElementById('fade').style.display='none';
+  }
+
+
+  window.document.onkeydown = function (e)
+  {
+      if (!e){
+          e = event;
+      }
+      if (e.keyCode == 27){
+          lightbox_close();
+      }
+  }
+
+  
+</script>

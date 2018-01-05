@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Grayscale - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link href="stylesheets/grayscale.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+
+        @font-face {
+    font-family: 'SEGOEUIL';
+    src: url('fonts/SEGOEUIL.eot');
+    src: local('SEGOEUIL'), url('fonts/SEGOEUIL.woff') format('woff'), url('fonts/SEGOEUIL.ttf') format('truetype');
+     }
+
+     body{
+
+        font-family:'SEGOEUIL' !important;
+        overflow-y: hidden;
+        position: fixed;
+     }   
+     h1{
+
+     font-family:'SEGOEUIL' !important;
+     text-transform: ;
+     font-size: 75px;
+     margin-top:20px ;
+     
+
+     }
+
+
+
+     .trip_select{
+
+        padding: 20px;
+     }
+
+    .navbar-brand{
+        height: 77px;
+    }
+
+    .navbar-nav{
+
+    	margin-top: 13px;
+        text-transform: none;
+
+    }
+    .navbar-custom .nav li a{
+
+        font-family: 'SEGOEUIL' !important;
+        font-size: 16px;
+    }
+    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
+    	  margin-left:-4%;
+    }
+
+    </style>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <table id="header" class="header">
+    <tr>
+        <td class="zero hidden-xs">
+            <table>
+                <tr>
+                    <td><a href="index.html" class="logo"></a></td>
+                    <td class="visible-md visible-lg"><a target="_blank" href="https://twitter.com/search?q=%23OneAppAllCabs&src=typd">&#35;OneAppAllCabs</a></td>
+                </tr>
+            </table>
+        </td>
+        
+        <td class="hidden-xs">
+            <table class="middle">
+                <tr>
+                    <td><a href="about.html" style="margin-left:0px">About Us</a></td>
+                    <td><a href="how.html">How Rutogo Works</a></td>
+                    <td><a target="_blank" href="http://blog.rutogo.com/">Blog</a></td>
+                    <td><a href="faq.html">FAQs</a></td>
+                    <td><a href="jobs.html">Jobs</a></td>
+                    <td><a target="_blank"  href="http://corporate.rutogo.com/">Corporate</a></td>              
+                </tr>
+            </table>
+        </td>
+        
+        <td class="zero hidden-xs">
+            <table>
+                <tr>
+                    <td class="visible-md visible-lg"><span><a>Call : +91-9999-088-077<br>(For Offline Bookings)</a></span></td>
+                    
+                </tr>
+            </table>
+        </td>
+        
+        <td class="visible-xs">
+            <table>
+                <tr>
+                    <td><a href="index.html" class="logo"></a></td>
+                </tr>
+            </table>
+        </td>
+        
+        <td class="zero visible-xs">
+            <table class="middle">
+                <tr>
+                    
+                    <td class="menuwrapper"><a href="#" class="menu bullet">Menu</a></td>
+                    <td class="closewrapper"><a href="#" class="close2 bullet">Close</a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <h1 class="brand-heading">Book a Cab Now</h1>
+                    </div>
+                 </div>
+                 <div class="row trip_select">    
+
+					                <div class="radio-inline col-md-4 col-md-offset-2" >
+					                    <label class="hourly-radio">
+					                      <input type="radio" name="optionsRadios" id="optionsRadios1"  value="0" checked >
+					                        Hourly Rental
+					                    </label>
+					                </div>
+					                <div class="radio-inline col-md-2" > 
+					                    <label class="outstations-radio">
+					                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="1" >
+					                        Outstations
+					                  </label>  
+					                </div>
+        			</div>	
+               			
+
+             
+             <div class="row">
+	             <div class="col-md-8">
+	                    <div class="hourly pull-left col-md-offset-5">
+	                    <form class="form">
+	                        <div class="form-group">
+	                          
+		                        <label class="sr-only" for="inputAddress"></label>
+		                        <input type="text" class="form-control" id="inputaddress" placeholder="inputaddress">
+		                    </div>
+	                        <div class="form-group">
+	                        <label for="fromCity" class="hide">from city</label>
+	                                        <select class="form-control">
+	                                            <option value="one" disabled selected>Hourly Rentals</option>
+	                                            <option value="two">Half Day (4 hrs & 40 Km)</option>
+	                                            <option value="three">Full Day (8 hrs & 80 Km)</option>
+	                                        </select>
+	                        </div>
+	                        <div class="form-group">
+	                        <div class='input-group date depart-hourly' id='datetimepicker3'>
+	                                            <input type='text' class="form-control" placeholder="Depart Time" />
+	                                            <span class="input-group-addon">
+	                                                <span class="glyphicon glyphicon-calendar"></span>
+	                                            </span>
+	                                        </div>
+	                        </div>
+	                                            
+	                        
+	                         <div class="form-group" >
+
+                                     <div class="radio-inline pull-left" > 
+                                        <label class="">
+                                        <input type="radio" name="car-hourly" id="car-hourly2" value="Indica" >
+                                           Indica
+                                      </label>  
+                                    </div>   
+					                  <div class="radio-inline pull-right " >
+					                    <label class="">
+					                      <input type="radio" name="car-hourly" id="car-hourly1"  value="Innova" checked >
+					                        Innova 
+					                    </label>
+					                </div>
+					                <div class="radio-inline " > 
+					                    <label class="">
+					                    <input type="radio" name="car-hourly" id="car-hourly2" value="Swift Dezire" >
+					                        Swift Dezire
+					                  </label>  
+					                </div>  
+					       
+					       </div>
+					<button type="button" onclick="getinfo();" style="" class="btn btn-primary">Next<span class="glyphicon glyphicon-arrow-right" style="margin-left:12px;"></span> </button>     
+	                        
+	                    </form>
+	                      
+	                </div>  
+	             </div>
+            </div>
+            <div class="row">
+	             <div class="col-md-8">
+	                <div class="outstations pull-left col-md-offset-5">
+	                    <form class="form">
+	                        <div class="form-group">
+	                            <label for="fromCity" class="hide">from city</label>
+	                                        <select class="form-control">
+	                                            <option value="one" disabled selected>Select Pickup Location</option>
+	                                            <option value="two">Two</option>
+	                                            <option value="three">Three</option>
+	                                            <option value="four">Four</option>
+	                                            <option value="five">Five</option>
+	                                        </select>
+	                        </div>
+	                        <div class="form-group">
+	                            <label for="fromCity" class="hide">from city</label>
+	                                        <select class="form-control">
+	                                            <option value="one" disabled selected>Select Drop Location</option>
+	                                            <option value="two">Two</option>
+	                                            <option value="three">Three</option>
+	                                            <option value="four">Four</option>
+	                                            <option value="five">Five</option>
+	                                        </select>
+	                        </div>
+	                        <div class="form-group">
+	                        <label for="fromCity" class="hide">from city</label>
+	                                        <select class="form-control">
+	                                            <option value="one" disabled >Type of Trip</option>
+	                                            <option value="two" selected>One Way</option>
+	                                            <option value="three">Round Trip</option>
+	                                        </select>
+	                        </div>
+	                        <div class="form-group">
+	                        <div class='input-group date' id='datetimepicker1'>
+	                                            <input type='text' class="form-control" placeholder="Depart Time" />
+	                                            <span class="input-group-addon">
+	                                                <span class="glyphicon glyphicon-calendar"></span>
+	                                            </span>
+	                                        </div>
+	                        </div>
+
+	                        <div class="form-group">
+	                        <div class='input-group date ' id='datetimepicker2'>
+	                                            <input type='text' class="form-control" placeholder="Depart Time" />
+	                                            <span class="input-group-addon">
+	                                                <span class="glyphicon glyphicon-calendar"></span>
+	                                            </span>
+	                                        </div>
+	                        </div>               
+	                         
+                             <div class="form-group" >
+
+                                     <div class="radio-inline pull-left" > 
+                                        <label class="">
+                                        <input type="radio" name="car-hourly" id="car-hourly2" value="Indica" >
+                                           Indica
+                                      </label>  
+                                    </div>   
+                                      <div class="radio-inline pull-right " >
+                                        <label class="">
+                                          <input type="radio" name="car-hourly" id="car-hourly1"  value="Innova" checked >
+                                            Innova 
+                                        </label>
+                                    </div>
+                                    <div class="radio-inline " > 
+                                        <label class="">
+                                        <input type="radio" name="car-hourly" id="car-hourly2" value="Swift Dezire" >
+                                            Swift Dezire
+                                      </label>  
+                                    </div>  
+                           
+                           </div>
+	                    <button type="button" onclick="getinfo();" style="" class="btn btn-primary">Next<span class="glyphicon glyphicon-arrow-right" style="margin-left:12px;"></span> </button>      
+	                        
+	                    </form>
+	                      
+	                </div>  
+	             </div>
+            </div>
+
+            <div class="row">
+	             
+            	<div class="container">
+	             <div class="col-md-5  col-xs-12  pull-left col-md-offset-3">
+	                
+		                <form class="form user-info">
+		                    <div class="form-group">
+		                        <label class="sr-only" for="inputName">Name</label>
+		                        <input type="text" class="form-control" id="inputName" placeholder="Name">
+		                    </div>
+		                    <div class="form-group">
+		                        <label class="sr-only" for="inputEmail">Email</label>
+		                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+		                    </div>
+		                    <div class="form-group">
+		                        <label class="sr-only" for="inputPhoneno">Phone No</label>
+		                        <input type="password" class="form-control" id="inputPhoneno" placeholder="Password">
+		                    </div>
+		                    <button type="submit"  class="btn btn-primary">Book</button>
+		                </form>
+		            </div>    
+		         </div>       
+		       </div>  
+
+                </div>
+            </div>
+            
+        </div>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+<div class="footer">
+<table>
+    <tr>
+        <td class="zero hidden-xs left"><p style="margin-left:0">&#169; 2015</p></td>
+        <td class="zero hidden-xs left"><a href="partner.html">Partner with us</a></td>
+        <td class="zero hidden-xs left"><a href="terms.html">Terms</a></td>
+        <td class="zero hidden-xs left"><a href="contactus.html">Contact Us</a></td>
+        <td class="zero hidden-xs left"><a href="#" style="text-decoration:none !important;color:inherit;font-size:inherit"  class="btn" data-popup-open="popup-1" >Popular Routes » </a></td>
+        <td style="width:100%"></td>
+        <td class="zero"><a target="_blank" id="twitter" href="https://twitter.com/route2go"></a></td>
+        <td class="zero"><a target="_blank" id="gplus" href="https://plus.google.com/u/0/101786292936778043859/posts"></a></td>
+        <td class="zero"><a target="_blank" id="facebook" href="https://www.facebook.com/route2go"></a></td>
+        <td class="zero"><a target="_blank" id="instagram" href=" https://instagram.com/route2go/" style="margin-right:0"></a></td>
+    </tr>
+</table>
+
+
+
+</div>
+
+
+
+    <!-- jQuery -->
+    <script src="javascripts/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="javascripts/bootstrap.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="javascripts/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="javascripts/grayscale.js"></script>
+    <script src="javascripts/moment.js"></script>
+    <script src="javascripts/id.js"></script>
+    <script src="javascripts/bootstrap-datetimepicker.min.js"></script>
+
+
+<script type="text/javascript">
+    
+$(document).ready(function(){
+    $('input[type="radio"]').click(function(){
+        if($(this).attr("value")=="0"){
+            $(".outstations").hide();
+            $(".hourly").show();
+        }
+        if($(this).attr("value")=="1"){
+            $(".hourly").hide();
+            $(".outstations").show();
+        }
+    });
+}); 
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            if($(this).attr("value")=="two"){
+                $("#datetimepicker2").hide();
+                $("#datetimepicker1").show();
+            }
+            else if($(this).attr("value")=="three"){
+                $("#datetimepicker2").show();
+                $("#datetimepicker1").show();
+            }
+            
+            else{
+                $("#datetimepicker2").hide();
+               
+            }
+        });
+    }).change();
+});
+</script>
+<script type="text/javascript">
+    function getinfo(){
+
+    	$('#optionsRadios1').attr('disabled',true);
+    	$('#optionsRadios2').attr('disabled',true);
+        $(".hourly").hide();
+        $(".outstations").hide();
+        
+        $('.user-info').show();
+    }
+</script>
+<script type="text/javascript">
+    function scroll(){
+
+        $("html,body").animate({
+            scrollTop : $(document).height() - $(window).height()
+        });
+    }
+</script>
+<script type="text/javascript">
+	$(function () {
+		$('#datetimepicker1').datetimepicker({
+			locale: 'id'
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function () {
+		$('#datetimepicker2').datetimepicker({
+			locale: 'id'
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function () {
+		$('#datetimepicker3').datetimepicker({
+			locale: 'id'
+		});
+	});
+</script>
+<script type="text/javascript">
+function initialize() {
+    var input = document.getElementById('inputaddress');
+    var options = {componentRestrictions: {country: 'ind'}};
+                 
+    new google.maps.places.Autocomplete(input, options);
+}
+             
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+body{
+		background-color: #F9F9F9;
+		margin: 0px;
+		display: block;
+	}
+
+	a{
+		font-family: calibri;
+		text-decoration: none;
+
+
+	}
+
+	a:link{
+		color: grey;
+	}
+
+	a:visited{
+		color: grey;
+	}
+
+	a:hover{
+		color: dimgrey;
+	}
+
+	.icon{
+		margin-left: 50px;
+		margin-top: 30px;
+		display: inline;
+
+	}
+	#logo-EN{
+		margin-top: 15px;
+	}
+
+	.signin{
+		float: right;
+		display: inline;
+		margin-right: 100px;
+		margin-top: 27px;
+	}
+
+	.text1{
+		text-align: center;
+		font-size: 50px;
+		font-family: Lusitana; 
+		color: #5FB337;
+	}
+
+	.text2{
+		text-align: center;
+		font-size: 18px;
+		color: grey;
+		font-family: calibri;
+	}
+
+	button{
+		margin-left: 620px;
+		margin-top: 20px;
+		height: 50px;
+		width: 200px;
+		background-color: #5FB337;
+		border: 0px;
+		border-radius: 5px; 
+		color: white;
+		font-family: verdana;
+		font-size: 20px;
+	}
+
+	button:hover{
+		background-color: #4F8635;
+	}
+	#pic1{
+		width: 101%;
+	}

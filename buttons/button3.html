@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	
+TweenMax.set('#yes', {
+  position:'absolute',
+  left:'50%',
+  xPercent:-50,
+  top:'50%',
+  yPercent:-50
+});
+TweenMax.set('#no', {
+  position:'absolute',
+  left:'50%',
+  xPercent:-50,
+  top:'50%',
+  yPercent:-50
+});
+
+//TICK
+
+var tickContainer = document.getElementById('tick-container');
+var tickOutlineBg = document.getElementById('tick-outline-bg');
+var tickOutline = document.getElementById('tick-outline');
+var tick = document.getElementById('tick');
+
+
+TweenMax.set(tickContainer, {
+  position:'absolute',
+  left:'30%',
+  xPercent:-50,
+  top:'50%',
+  yPercent:-50,
+  cursor:'pointer',
+  userSelect:'none'
+});
+
+
+TweenMax.set(tickOutline, {
+  drawSVG:'0% 100%',
+  transformOrigin:'50% 50%',
+  rotation:205
+});
+TweenMax.set(tick, {
+  drawSVG:'100% 100%'
+})
+
+var tickTl = new TimelineMax({paused:true, repeat:1, yoyo:true, repeatDelay:2});
+tickTl.timeScale(2);
+tickTl.to('#yes', 1, {
+  alpha:0,
+  rotation:-90,
+  scale:0.8,
+  ease:Power2.easeIn
+})
+ .to(tickOutline, 1, {  
+  drawSVG:'0%',
+  ease:Power2.easeIn
+}, '-=1')
+.to(tick, 1, {
+  drawSVG:'75% 3%',
+  ease:Back.easeOut
+});
+
+tickContainer.addEventListener('click', function(){
+  if(tickTl.time() === 0){
+    tickTl.play(0);
+  } 
+
+})
+
+//CROSS
+
+
+var crossContainer = document.getElementById('cross-container');
+var crossOutlineBg = document.getElementById('cross-outline-bg');
+var crossOutline = document.getElementById('cross-outline');
+var crossLongLine = document.getElementById('cross-long-line');
+var crossShortLine = document.getElementById('cross-short-line');
+
+TweenMax.set(crossContainer, {
+  position:'absolute',
+  left:'70%',
+  xPercent:-50,
+  top:'50%',
+  yPercent:-50,
+  cursor:'pointer',
+  userSelect:'none'
+});
+
+TweenMax.set(crossOutline, {
+  drawSVG:'0% 100%',
+  transformOrigin:'50% 50%',
+  rotation:228
+});
+TweenMax.set(crossLongLine, {
+  drawSVG:'100% 100%'
+})
+TweenMax.set(crossShortLine, {
+  drawSVG:'100% 100%'
+})
+
+var crossTl = new TimelineMax({paused:true, repeat:1, yoyo:true, repeatDelay:2});
+crossTl.timeScale(2);
+crossTl.to('#no', 1, {
+  alpha:0,
+  rotation:-90,
+  scale:0.8,
+  ease:Power2.easeIn
+})
+ .to(crossOutline, 1, {  
+  drawSVG:'0%',
+  ease:Power2.easeIn
+}, '-=1')
+.to(crossLongLine, 1, {
+  drawSVG:'72% 3%',
+  ease:Back.easeOut
+})
+.to(crossShortLine, 1, {
+  drawSVG:'100% 3%',
+  ease:Back.easeOut
+}, '-=1')
+
+
+crossContainer.addEventListener('click', function(){
+  
+  if(crossTl.time() === 0){
+      crossTl.play(0);
+  }
+
+  
+})
+
+</script>
+
+	<style type="text/css">
+	body{
+  background-color:#181A19;
+  width:100%;
+  height:100%;
+  font-family:Roboto, sans-serif;
+}
+
+#tick-outline-bg{
+  opacity:0.2;
+}
+
+#cross-outline-bg{
+  opacity:0.2;
+}
+
+#yes, #no{
+  font-size:50px;
+  text-align:center;
+  color:#ecf0f1;
+}
+
+
+
+</style>
+	<title></title>
+</head>
+<body>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<!--TICK -->
+<div id="tick-container">
+ <div id="yes">YES</div>
+<svg id="tick-svg-node" version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="149px" height="149px" viewBox="0 0 149 149" enable-background="new 0 0 149 149" xml:space="preserve">
+<defs>
+</defs>
+ <path id="tick-outline-bg" fill="none" stroke="#ecf0f1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M145,74.5c0,38.9-31.6,70.5-70.5,70.5S4,113.4,4,74.5S35.6,4,74.5,4S145,35.6,145,74.5z"/>
+<path id="tick-outline" fill="none" stroke="#ecf0f1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M145,74.5c0,38.9-31.6,70.5-70.5,70.5S4,113.4,4,74.5S35.6,4,74.5,4S145,35.6,145,74.5z"/>
+<path id="tick" fill="none" stroke="#ecf0f1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M111,48L64.1,94.4L10.4,45.1"/>
+  
+</svg>
+
+ </div>
+
+<!--CROSS-->
+<div id="cross-container">
+  <div id="no">NO</div>
+<svg id="cross-svg-node" version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="149px" height="149px" viewBox="0 0 149 149" enable-background="new 0 0 149 149" xml:space="preserve">
+<defs>
+</defs>
+<path id="cross-outline-bg" fill="none" stroke="#ecf0f1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M145,74.5c0,38.9-31.6,70.5-70.5,70.5S4,113.4,4,74.5S35.6,4,74.5,4S145,35.6,145,74.5z"/>
+<path id="cross-outline" fill="none" stroke="#ecf0f1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M145,74.5c0,38.9-31.6,70.5-70.5,70.5S4,113.4,4,74.5S35.6,4,74.5,4S145,35.6,145,74.5z"/>
+<path id="cross-long-line" fill="none" stroke="#ecf0f1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M99.6,101.6l-73-78.8"/>
+<path id="cross-short-line" fill="none" stroke="#ecf0f1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M46.4,99.6l55.2-51.1"/>
+</svg>
+
+</div>
+
+
+</body>
+</html>

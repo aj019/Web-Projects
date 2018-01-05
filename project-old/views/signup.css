@@ -1,0 +1,143 @@
+body{
+
+	background-image: url('C:/xampp/htdocs/project/resources/background.jpg');
+  	margin: 0px;
+}	
+
+.topbar{
+
+	background-image: url('C:/xampp/htdocs/project/resources/top_bar.jpg');
+}	
+
+.heading{
+
+ 	font-size: 35px;
+  font-family: Lusitana; 
+  font-weight: 100;
+
+}
+
+
+.main{
+  background-color: #FFFFFF;
+  margin-top: 47px;
+  border: 0.79px solid grey;
+  width: 820px;
+  height: 500px;
+  margin-left: 330px;
+  padding: 20px;
+}
+.shadow{
+  background-image: url('C:/xampp/htdocs/project/resources/shadow.png');
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 860px;
+  margin-left: 330px;
+}
+.info{
+
+  width: 400px;
+  height: 372px;
+  float: left;
+  display: inline;
+  padding-left: 14px;
+}
+
+.head{
+  margin-bottom: 0px;
+  font-family: verdana;
+  font-size: 15px;
+  font-weight: 100;
+  color:dimgrey;
+  margin-right: 110px;
+  width: 400px;
+}
+
+.points{
+  font-family: verdana;
+  font-weight: 100;
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+  width: 200px;
+}
+
+.about{
+  width: 280px;
+  display: inline-block;
+}
+
+.image{
+  display: inline;  
+}
+
+img{
+  padding-right: 20px;
+  height: 53.3px;
+}
+
+
+.points_text{
+  margin-top: 8px; 
+}
+.signup{
+border: 0.5px solid grey ;
+background-color: #F5F5F5;
+width: 360px;
+height: 370px;
+margin-left: 5px;
+display: inline-block;
+padding-left: 20px;
+padding-top: 10px;
+margin-left: 20px; 
+margin-top: 20px; 
+}
+.create{
+    font-family: Lusitana; 
+    font-size: 25px;
+    margin: 5px;  
+    width: 350px;
+}
+label{
+  font-family: verdana;
+  font-size: 15px;
+  color: grey;
+}
+input {
+
+  height: 50px;
+  width: 340px;
+  font-family: verdana;
+  font-size: 18px;
+}
+button{
+  height: 40px;
+  width: 120px;
+  background-color: #5FB337;
+  border: 0px;
+  border-radius: 3px; 
+  color: white;
+  font-family: verdana;
+  font-size: 15px;
+}
+button:hover{
+    background-color: #4F8635;
+  }
+.checkbox{
+    height: 18px;
+    width: 18px;
+    float: left;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 10px; 
+  }
+  a{
+    text-decoration: none;
+    color: #4a8db8;
+  }
+  .signin{
+    float: right;
+    display: inline;
+    font-size: 16px;
+    margin-right: 10px;
+  }

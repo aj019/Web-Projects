@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#color{
+  color: red;
+}
+
+body{
+  background-color: #112;
+  color: white;
+}
+
+h1{
+
+	font-size: 100px;
+}
+
+p{
+	font-size: 80px;
+	color: #f6f5f6;
+}
+	</style>
+
+  <script type="text/javascript"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" ></script>
+  <script>
+
+  	var r=255,g=0,b=0;
+
+setInterval(function(){
+  if(r > 0 && b == 0){
+    r--;
+    g++;
+  }
+  if(g > 0 && r == 0){
+    g--;
+    b++;
+  }
+  if(b > 0 && g == 0){
+    r++;
+    b--;
+  }
+  $("#color").text("rgb("+r+","+g+","+b+")");
+  $("body").css("background-color","rgb("+r+","+g+","+b+")");
+  $("#color").css("color","rgb("+r+","+g+","+b+")");
+
+},10);
+
+  </script>
+
+</head>
+<body>
+<center>
+  <h1>Coming Soon !!!</h1>
+  <p>Memeveme.com</p>
+  <h1 id="color">rgb(255,0,0)</h1>
+</center>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<html>
+<head>
+
+	<style type="text/css">
+
+      @import url("views/test3.css");
+	</style>
+	<title></title>
+</head>
+<body>
+
+          <header>
+    <a href="#" class='logo'></a>
+    <div class="logout">
+        <a href="" id='sin'>Logout </a>
+    </div>
+
+    </header>
+    <br>
+
+		<div class="top-bar">
+
+				<div class="searchbar">
+
+					<div class="search-icon">	
+					</div>	
+					<input type="Text" placeholder="Search">
+	               </div>
+				</div>	
+				<br>		
+
+
+	<div class="left_bar">
+		<div class="form-container">
+
+			<div class="note">
+				<p style="display: inline; ">NOTES</p>
+				<img src="add.png" class="add-img">
+			</div>
+
+			<div class="main-body" id="main">
+
+			<div class="lists" id='list1'>
+			<div>Test</div>		
+			<span>10.15pm</span>	
+			</div>
+			
+			<div class='not' id='note1' contenteditable=TRUE>
+				Hi! This is great
+			</div>
+		
+		
+			<div class="lists" id='list2'>
+				<div>Test2</div>
+				<span>10.15am</span>	
+			</div>
+		
+			<div class='not' id='note2' contenteditable=TRUE>
+				Hi! This is great
+			</div>	
+
+		
+			<div class="lists" id='list3'>
+				<div>Test3</div>
+				<span>12.15pm</span>	
+			</div>
+		
+			<div class='not' id='note3' contenteditable=TRUE>
+				Hi! This is great
+			</div>
+	</div>	
+
+		</div>
+
+
+
+	</div>
+
+
+	<div class="right_bar">
+		<form method="POST" action="test3.php"> 
+		<script src="ckeditor/ckeditor.js">
+
+		</script>
+		<textarea cols="20" rows="20" id="ckeditor" name="editor1">
+
+		</textarea>
+
+		<script>
+		CKEDITOR.replace( 'editor1' );
+
+
+		</script>
+        <br>
+		<center><button>CREATE</button></center>
+	</form>
+	</div>
+	</div>		
+
+</body>
+
+<?php
+
+$link = mysql_connect('localhost','root','');
+			mysql_select_db('souvenier');
+			$query = "SELECT note FROM note where uid='1' ";
+			mysql_query($query);
+			echo mysql_error($link);
+
+echo "<div id='var'>";
+echo $query;
+echo "</div>";
+?>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function (){
+		
+		$(".lists").click(function(){
+			id = $(this).attr('id');		
+		id = id.split('list');	
+		id=id[1];			
+        
+
+		main_body = document.getElementById('ckeditor');
+		list_element = document.createElement('div');	
+
+		})
+
+
+
+</script>
+
+</html>

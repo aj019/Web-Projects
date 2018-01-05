@@ -1,0 +1,280 @@
+<html>
+<head>
+	<title></title>
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo:400italic' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+	
+	body{
+
+		margin: 0px;
+		background-color: #ECF0F1;
+	}
+	
+
+	.menu-container{
+		height: 70px;
+		background-color: #F5f5f5;
+		position: fixed;
+		width: 100%;
+		top:0;
+
+
+	}
+
+	.inside-wrapper{
+
+		height: 70px;
+		margin-left: 100px;
+		margin-right: 100px;
+
+	}
+
+	.logo{
+	height: 70px;
+	}
+
+	
+
+	.outside-wrapper{
+
+
+	}
+	.logo-container{
+
+		background-image:url("resources/logo.png");
+		height: 70px;
+		width: 154px;
+		background-repeat: no-repeat;
+		background-size: 140px;
+		margin-top: 5px;
+		display: inline-block;
+
+	}
+	.link{
+
+		padding: 35px;
+
+	}
+
+	a{
+		text-decoration: none;
+		font-family: 'PT Sans', sans-serif;
+	}
+
+	a:hover{
+		animation: fadein 2s;
+	    -moz-animation: fadein 2s; /* Firefox */
+	    -webkit-animation: fadein 2s; /* Safari and Chrome */
+	    -o-animation: fadein 2s; /* Opera */
+	}
+	@keyframes fadein {
+	    from {
+	        opacity:0;
+	    }
+	    to {
+	        opacity:1;
+	    }
+	}
+	@-moz-keyframes fadein { /* Firefox */
+	    from {
+	        opacity:0;
+	    }
+	    to {
+	        opacity:1;
+	    }
+	}
+	@-webkit-keyframes fadein { /* Safari and Chrome */
+	    from {
+	        opacity:0;
+	    }
+	    to {
+	        opacity:1;
+	    }
+	}
+	@-o-keyframes fadein { /* Opera */
+	    from {
+	        opacity:0;
+	    }
+	    to {
+	        opacity: 1;
+	    }
+	}
+
+	.link-continer{
+		position: absolute;
+		margin-top: 28px;
+		margin-left: 430px;
+
+	}
+
+	#fade{
+	    display: none;
+	    position: fixed;
+	    top: 0%;
+	    left: 0%;
+	    width: 100%;
+	    height: 100%;
+	    background-color: #000;
+	    z-index:1001;
+	    -moz-opacity: 0.7;
+	    opacity:.70;
+	    filter: alpha(opacity=70);
+	}
+
+	#light{
+	    display: none;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    width: 400px;
+	    height: 370px;
+	    margin-left: -215px;
+	    margin-top: -185px;                 
+	    padding: 10px;
+	    border: 2px solid #FFF;
+	    background-image: url("resources/map.png");
+	    background-repeat: no-repeat;
+	    z-index:1002;
+	    overflow:visible;
+	}
+
+	.home{
+		width: 100%;
+		height: 725px;
+		margin-top: 100px;
+		font-family: 'Cabin', sans-serif;	
+	}
+
+	.title{
+		font-size: 40px;
+		text-align: center;
+	}
+
+	.home-img{
+
+		display: inline-block;
+		width: 134px;
+		height:140px;
+		margin-top: 40px;
+		background-repeat: no-repeat;
+		margin-left: 260px;
+		outline: solid #0266C8;
+		background-position: center;
+		outline-width: 2px; 
+
+	}
+
+	#img1{
+		background-image: url("resources/innovation.png");
+		background-size: 100px;
+	}
+
+	#img2
+	{
+		background-image: url("resources/creation.png");
+		background-size: 100px;
+
+	}
+
+	#img3{
+		background-image: url("resources/technology3.png");
+		background-size: 110px;
+	}
+
+
+	.home-img-info{
+		display: inline-block;
+		width: 134px;
+		height:140px;
+		margin-left: 260px;
+		text-align: center;
+		font-size: 22px;
+		font-family: 'Arvo', serif;
+		font-style: italic;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="outside-wrapper">
+		<div class="menu-container">
+			<div class="inside-wrapper">
+				<span class="logo-container"> </span>	 
+				<span class="link-continer">
+					<span class="link"><a href=" ">HOME</a></span> <span class="link"><a href="">ABOUT</a></span> <span class="link"><a href="">EVENTS</a></span> <span class="link"><a class="" href="">TEAM</a></span> <span class="link"><a href="#" onclick="lightbox_open();">CONTACT</a></span>
+				</span>
+			</div>
+		</div>
+		<div id="light"><center><img src="resources/logo.png" style="width: 150px;"></center>
+			<hr>
+			<p style="font-family: 'PT Sans', sans-serif; font-size: 24px; margin-bottom: 0px; margin-top: 0px;">Get in touch with us</p>
+			<p style="font-family: 'Arvo', serif; font-style: italic; margin-bottom: 0px; margin-top: 0px;" >We're very approachable and would love to speak to you. Feel free to send us an email.</p>
+			<table>
+				<tr><td><img src="resources/mail2.png" style="width: 30;"></td><td><p style="display:inline-block; font-size:20px;">gsclub.mait@gmail.com</p></td></tr>
+				<tr><td><img src="resources/mob2.png"  style="width: 30;"></td><td><p style="display:inline-block; font-size:20px;font-size:20px;margin-top:0px; margin-bottom:0px;">+919958632696</p></td></tr>
+				<tr><td><img src="resources/add.png" style=" width:30px;"></td><td><p style="display:inline-block; font-size:20px;">MAHARAJA AGRASEN INSTITUTE OF TECHNOLOGY<br>
+		PSP Area, Plot No. 1, Sector-22, Rohini,
+		Delhi-110086</p></td></tr></table>
+		</div>
+		<div id="fade" onClick="lightbox_close();"></div> 	
+			
+		<div class="home">
+		<p class="title"> <i>At</i> Google Student Club </p>
+		<p class="title"><i>Our AIM</i></p>
+		<div class="home-img" id="img1"></div>
+		<div class="home-img" id="img2"></div>
+		<div class="home-img" id="img3"></div>
+		<br>
+		<div class="home-img-info" id="info1">inovation</div>
+		<div class="home-img-info" id="info2">creation</div>
+		<div class="home-img-info" id="info3">technology</div>
+
+		</div>
+		<hr>
+
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	function lightbox_open(){
+	    window.scrollTo(0,0);
+	    document.getElementById('light').style.display='block';
+	    document.getElementById('fade').style.display='block';  
+	}
+
+	function lightbox_close(){
+	    document.getElementById('light').style.display='none';
+	    document.getElementById('fade').style.display='none';
+	}
+
+
+	window.document.onkeydown = function (e)
+	{
+	    if (!e){
+	        e = event;
+	    }
+	    if (e.keyCode == 27){
+	        lightbox_close();
+	    }
+	}
+
+</script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript"> 
+$(window).scroll(function(){
+     var top=$(window).scrollTop()
+     console.log(top)
+     /*put your color in background color */
+     if(top>1){$('.menu-container').css('background-color','#ABB7B7'); }
+     else{ $('.menu-container').css('background-color','Transparent'); }
+
+      }) 
+</script>
+</html>
